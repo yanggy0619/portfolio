@@ -1,0 +1,165 @@
+@font-face {
+  font-family: optima;
+  font-style: normal;
+  font-weight: 300;
+  src: url("../fonts/OptimaNovaLTProLight.otf") format("opentype"); }
+@font-face {
+  font-family: optima;
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/OptimaNovaLTProRegular.otf") format("opentype"); }
+@font-face {
+  font-family: optima;
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/OptimaNovaLTProMedium.otf") format("opentype"); }
+@font-face {
+  font-family: optima;
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/OptimaNovaLTProBold.otf") format("opentype"); }
+@font-face {
+  font-family: spoqa;
+  font-style: normal;
+  font-weight: 300;
+  src: url("../fonts/SpoqaHanSansNeo-Light.eot");
+  src: local("Noto Sans KR"), url("../fonts/SpoqaHanSansNeo-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/SpoqaHanSansNeo-Light.woff2") format("woff2"), url("../fonts/SpoqaHanSansNeo-Light.woff") format("woff"), url("../fonts/SpoqaHanSansNeo-Light.otf") format("opentype"); }
+@font-face {
+  font-family: spoqa;
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/SpoqaHanSansNeo-Regular.eot");
+  src: local("Noto Sans KR"), url("../fonts/SpoqaHanSansNeo-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/SpoqaHanSansNeo-Regular.woff2") format("woff2"), url("../fonts/SpoqaHanSansNeo-Regular.woff") format("woff"), url("../fonts/SpoqaHanSansNeo-Regular.otf") format("opentype"); }
+@font-face {
+  font-family: spoqa;
+  font-style: normal;
+  font-weight: 600;
+  src: url("../fonts/SpoqaHanSansNeo-Medium.eot");
+  src: local("Noto Sans KR"), url("../fonts/SpoqaHanSansNeo-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/SpoqaHanSansNeo-Medium.woff2") format("woff2"), url("../fonts/SpoqaHanSansNeo-Medium.woff") format("woff"), url("../fonts/SpoqaHanSansNeo-Medium.otf") format("opentype"); }
+@font-face {
+  font-family: spoqa;
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/SpoqaHanSansNeo-Bold.eot");
+  src: local("Noto Sans KR"), url("../fonts/SpoqaHanSansNeo-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/SpoqaHanSansNeo-Bold.woff2") format("woff2"), url("../fonts/SpoqaHanSansNeo-Bold.woff") format("woff"), url("../fonts/SpoqaHanSansNeo-Bold.otf") format("opentype"); }
+body, h1, h2, h3, h4, h5, h6, p, ul, button, figure {
+  margin: 0;
+  padding: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%; }
+
+ul {
+  list-style: none; }
+
+a:link, a:visited, a:hover, a:active {
+  text-decoration: none;
+  color: inherit; }
+
+img {
+  vertical-align: top; }
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer; }
+
+input[type="text"] {
+  border: 1px solid #aaa;
+  border-radius: 0; }
+
+button, input {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit; }
+
+header, nav, section, footer {
+  display: block; }
+
+.blind {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: none;
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%); }
+
+* {
+  box-sizing: border-box; }
+
+/* #loading{
+    @include flex;
+    @include justify-content;
+    @include align-items;
+    height: 100vh;
+    svg{position: absolute;top: 30%;left: 15%;z-index: -1;}
+    h1{font-family: "optima";font-size: 150px;color: $blue;text-align: center;}
+} */
+#header {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  position: fixed;
+  width: 100%;
+  padding: 50px;
+  z-index: 100; }
+
+#cnt1 {
+  height: 100vh;
+  width: 100%;
+  padding-top: 150px; }
+  #cnt1 .bg_img {
+    margin-left: 550px;
+    position: relative;
+    background: url(../images/cnt1/cnt1_image.jpg) no-repeat;
+    width: 555px;
+    height: 673px; }
+    #cnt1 .bg_img p {
+      position: absolute;
+      font-family: optima;
+      font-size: 130px; }
+      #cnt1 .bg_img p:nth-of-type(1) {
+        top: 0;
+        left: -70%;
+        color: #B08069; }
+      #cnt1 .bg_img p:nth-of-type(2) {
+        bottom: 0;
+        right: -115%;
+        color: #7D9BA8; }
+  #cnt1 .deco1 {
+    background: url(../images/cnt1/shape2.png);
+    width: 105px;
+    height: 105px; }
+  #cnt1 .deco2 {
+    background: url(../images/cnt1/shape1.png);
+    width: 129px;
+    height: 129px; }
+  #cnt1 .deco3 {
+    background: url(../images/cnt1/design1.png);
+    width: 128px;
+    height: 108px; }
+  #cnt1 .deco4 {
+    background: url(../images/cnt1/design2.png);
+    width: 86px;
+    height: 86px; }
+  #cnt1 .deco1, #cnt1 .deco2, #cnt1 .deco3, #cnt1 .deco4 {
+    position: absolute; }
+  #cnt1 .deco1 {
+    bottom: 40%;
+    left: 20%; }
+  #cnt1 .deco2 {
+    bottom: 30%;
+    left: 10%; }
+  #cnt1 .deco3 {
+    top: 10%;
+    right: 35%; }
+  #cnt1 .deco4 {
+    bottom: 25%;
+    right: 7%; }
+
+/*# sourceMappingURL=index.css.map */
