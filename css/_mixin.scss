@@ -28,3 +28,25 @@
     -moz-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
   }
+  @mixin transform($value...) {
+    -webkit-transform: $value;
+    -moz-transform: $value;
+    -o-transform: $value;
+    -ms-transform: $value;
+    transform: $value;
+  }
+  @mixin keyframes($aniName) {
+    @-webkit-keyframes #{$aniName} {@content;}
+    @-moz-keyframes #{$aniName} {@content;}
+    @keyframes #{$aniName} {@content;}
+  }
+  @mixin animation($value...) {
+    -webkit-animation: $value;
+    -moz-animation: $value;
+    animation: $value;
+  }
+  @mixin animation-delay($value) {
+    -webkit-animation-delay: $value;
+    -moz-animation-delay: $value;
+    animation-delay: $value;
+  }

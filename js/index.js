@@ -1,4 +1,5 @@
 $(document).ready(function() {
+    // #cnt1
     let currentX = '';
     let currentY = '';
     const moveDis = 0.005;
@@ -17,8 +18,12 @@ $(document).ready(function() {
             $(el).css('left', newX + 'px');
             $(el).css('top', newY + 'px');
         });
-
     });
 
-    $('.txt').lettering();
+    // #cnt3
+    /* state정리:
+    1)aria-expanded: 아코디언 패널이 열려있어서 확장된 상태는 true, 비확장된 상태는 false
+    2)aria-expanded="true" 인 경우만 aria-disabled="", true(다시클릭할 수 없는경우) / false(다시 클릭할 수 있는 경우) */
+    const $acdn = $('#cnt3 .accordion')
+
 });
