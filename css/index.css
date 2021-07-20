@@ -101,7 +101,7 @@ body {
     font-family: spoqa; }
 
 #cnt1, #cnt2, #cnt3, #cnt4 {
-  padding-top: 150px; }
+  padding-top: 200px; }
 
 /* #loading{
     @include flex;
@@ -242,43 +242,51 @@ body {
       opacity: 1; }
 
 #cnt3 {
-  position: relative;
-  height: 200vh; }
+  height: 160vh; }
   #cnt3 .accordion {
-    position: absolute;
-    top: 15%;
-    right: 50px;
     width: 1230px;
-    color: #F4EDE5; }
-    #cnt3 .accordion .title {
-      height: 150px; }
-      #cnt3 .accordion .title div {
-        margin: 30px 0 0 50px; }
-      #cnt3 .accordion .title span {
+    color: #F4EDE5;
+    float: right; }
+    #cnt3 .accordion .title:nth-of-type(1) {
+      background-color: #EBCBC0;
+      color: #A89C8D; }
+      #cnt3 .accordion .title:nth-of-type(1) span {
+        border-color: #A89C8D; }
+      #cnt3 .accordion .title:nth-of-type(1) .bdline {
+        background-color: #A89C8D; }
+    #cnt3 .accordion .title:nth-of-type(2) {
+      background-color: #7D9BA8; }
+    #cnt3 .accordion .title:nth-of-type(3) {
+      background-color: #F4EDE5; }
+      #cnt3 .accordion .title:nth-of-type(3) span {
+        border-color: #7D9BA8;
+        color: #7D9BA8; }
+      #cnt3 .accordion .title:nth-of-type(3) .bdline {
+        background-color: #7D9BA8; }
+    #cnt3 .accordion .title:nth-of-type(4) {
+      background-color: #B08069; }
+    #cnt3 .accordion .title:nth-of-type(5) {
+      background-color: #A89C8D; }
+    #cnt3 .accordion .header {
+      height: 150px;
+      width: 100%;
+      text-align: left; }
+      #cnt3 .accordion .header span {
         font-size: 40px;
         border: 2px solid #F4EDE5;
         padding: 0 27px; }
-      #cnt3 .accordion .title:nth-of-type(1) {
-        background-color: #EBCBC0;
-        color: #A89C8D; }
-        #cnt3 .accordion .title:nth-of-type(1) span {
-          border-color: #A89C8D; }
-      #cnt3 .accordion .title:nth-of-type(2) {
-        background-color: #7D9BA8; }
-      #cnt3 .accordion .title:nth-of-type(3) {
-        background-color: #F4EDE5; }
-        #cnt3 .accordion .title:nth-of-type(3) span {
-          border-color: #7D9BA8;
-          color: #7D9BA8; }
-      #cnt3 .accordion .title:nth-of-type(4) {
-        background-color: #B08069; }
-      #cnt3 .accordion .title:nth-of-type(5) {
-        background-color: #A89C8D; }
-      #cnt3 .accordion .title .bdline {
+      #cnt3 .accordion .header div:first-child {
+        margin: 39px 0 37px 50px; }
+      #cnt3 .accordion .header .bdline {
         background: #F4EDE5;
         height: 2px;
         width: 90%;
-        display: inline-block; }
+        display: inline-block;
+        margin: 0 5%;
+        opacity: 0;
+        transition: opacity 1s; }
+      #cnt3 .accordion .header.on .bdline {
+        opacity: 1; }
     #cnt3 .accordion .panel {
       display: -webkit-box;
       display: -moz-box;
@@ -293,7 +301,8 @@ body {
       overflow: hidden;
       max-height: 0;
       margin: 0 auto;
-      height: 400px; }
+      height: 400px;
+      transition: max-height 0.5s; }
       #cnt3 .accordion .panel.on {
         visibility: visible;
         max-height: 500px; }
@@ -320,5 +329,13 @@ body {
         #cnt3 .accordion .panel .about p {
           font-size: 20px;
           margin-top: 20px; }
+
+#cnt4 {
+  height: 100vh; }
+  #cnt4 .bg {
+    background: url(../images/cnt4/sulwhasoo_bg.png) no-repeat;
+    width: 1022px;
+    height: 973px;
+    float: right; }
 
 /*# sourceMappingURL=index.css.map */

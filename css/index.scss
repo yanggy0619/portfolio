@@ -93,7 +93,7 @@ body{font-family: spoqa;}
   h2{font-family: optima;font-size: 50px;color: $Rbrwn;}
   p{font-family: spoqa;}
 }
-#cnt1, #cnt2, #cnt3, #cnt4{padding-top: 150px;}
+#cnt1, #cnt2, #cnt3, #cnt4{padding-top: 200px;}
 
 /* #loading{
     @include flex;
@@ -180,35 +180,38 @@ body{font-family: spoqa;}
 }
 
 #cnt3{
-  position: relative;height: 200vh;
+  height: 160vh;
   .accordion{
-    position: absolute;top: 15%;right: 50px;width: 1230px;color: $beige;
-    .title{
-      height: 150px;
-      div{margin: 30px 0 0 50px;}
+    width: 1230px;color: $beige;float: right;
+    .title:nth-of-type(1){
+      background-color: $pink;color: $brwn;
+      span{border-color: $brwn;}
+      .bdline{background-color: $brwn;}
+     }
+    .title:nth-of-type(2){background-color: $blue;}
+    .title:nth-of-type(3){
+      background-color: $beige;
+      span{border-color: $blue;color: $blue;}
+      .bdline{background-color: $blue;}
+    }
+    .title:nth-of-type(4){background-color: $Rbrwn;}
+    .title:nth-of-type(5){background-color: $brwn;}
+    .header{
+      height: 150px;width: 100%;text-align: left;
       span{
         font-size: 40px;border: 2px solid $beige;padding: 0 27px;
       }
-     &:nth-of-type(1){
-       background-color: $pink;color: $brwn;
-       span{border-color: $brwn;}
-      }
-     &:nth-of-type(2){background-color: $blue;}
-     &:nth-of-type(3){
-       background-color: $beige;
-       span{border-color: $blue;color: $blue;}
-     }
-     &:nth-of-type(4){background-color: $Rbrwn;}
-     &:nth-of-type(5){background-color: $brwn;}
+      div:first-child{margin: 39px 0 37px 50px;}
      .bdline{
-       background: $beige;height: 2px;width: 90%;display: inline-block;
+       background: $beige;height: 2px;width: 90%;display: inline-block;margin: 0 5%;opacity: 0; transition: opacity 1s;
       }
+      &.on .bdline{opacity: 1;}
     }
     .panel{
       @include flex;
       @include justify-content(space-around);
       @include align-items;
-      visibility: hidden;overflow: hidden;max-height: 0;margin: 0 auto;height: 400px;
+      visibility: hidden;overflow: hidden;max-height: 0;margin: 0 auto;height: 400px;transition: max-height 0.5s;
       &.on{
         visibility: visible;max-height: 500px;
       }
@@ -226,5 +229,12 @@ body{font-family: spoqa;}
         p{font-size: 20px;margin-top: 20px;}
       }
     }
+  }
+}
+
+#cnt4{
+  height: 100vh;
+  .bg{
+    background: url(../images/cnt4/sulwhasoo_bg.png) no-repeat;width: 1022px;height: 973px;float: right;
   }
 }
