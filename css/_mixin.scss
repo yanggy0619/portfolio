@@ -5,6 +5,10 @@
     display: -webkit-flex;
     display: flex;
   }
+  @mixin flex-wrap($value: wrap) {
+    -webkit-flex-wrap: $value;
+    flex-wrap: $value;
+  }
   @mixin justify-content($value: center) {
     -webkit-justify-content: $value;
     justify-content: $value;

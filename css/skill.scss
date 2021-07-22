@@ -1,0 +1,18 @@
+@charset "utf-8";
+@import  "_var", "_mixin", "_funcion";
+
+#cnt3{
+    #acdnPanel1{
+        #box{
+            @include flex;
+            text-align: center;width: 300px;
+        }
+        #box *{height: 50px;}
+        #digital{
+            @include flex;
+            @include justify-content;
+            @include align-items;
+            border-radius: 80px;border: 1px solid $gray;width: 500px;font-size: 16px;color: $gray;}
+            #btn{width: 100px;border-radius: 50%;background: $brwn;font-size: 13px;font-weight: 700;color: #fff;}
+    }
+}

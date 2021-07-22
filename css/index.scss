@@ -82,18 +82,20 @@ img{vertical-align: top;}
 button{border: none;background: none;cursor: pointer;}
 input[type="text"]{border: 1px solid #aaa;border-radius: 0;}
 button, input{font-family: inherit;font-size: inherit;color: inherit;}
+address{font-style: normal;}
 header, nav, section, footer{display: block;}
 .blind{width: 1px;height: 1px;overflow: hidden;border: none;position: absolute;clip: rect(1px, 1px, 1px, 1px);clip-path: inset(50%);}
 *{box-sizing: border-box;}
-body{font-family: spoqa;}
+body{font-family: spoqa;color: $gray;}
 
 //common class
 .txt_wrap{
   padding-left: 200px;
   h2{font-family: optima;font-size: 50px;color: $Rbrwn;}
-  p{font-family: spoqa;}
 }
 #cnt1, #cnt2, #cnt3, #cnt4{padding-top: 200px;}
+#dim{background: rgba(0, 0, 0, .5);position: fixed;top: 0;left: 0;right: 0;bottom: 0;z-index: 99;}
+
 
 /* #loading{
     @include flex;
@@ -105,9 +107,32 @@ body{font-family: spoqa;}
 } */
 
 #header{
+  pointer-events: none;
+  .util{
     @include flex;
     @include justify-content(space-between);
-    position: fixed;width: 100%;padding: 50px;z-index: 100;
+    position: fixed;width: 100%;padding: 50px;z-index: 102;
+    .btn{background: url(../images/cnt1/gnb_btn.png);width: 75px;height: 78px;pointer-events: auto;}
+  }
+  .gnb{position: fixed;}
+    .gnb{
+      opacity: 0;width: 100%;height: 100%;z-index: 101;
+      top: 10%;right: -50%;font-family: optima;font-size: 50px;color: $Rbrwn;
+      ul{
+        li{
+          margin-top: 30px;
+          span{padding-left: 50px;}
+        }
+      }
+    }
+    .gnb_bg{
+      background: $skyblue;border-radius: 50%;position: absolute;top: -1100px;left: 2500px;width: 1px;height: 1px;transition: all 0.5s;z-index: 100;
+    }
+    .gnb.active + .gnb_bg{
+    background: $skyblue;border-radius: 50%;width: 1912px;height: 2001px;position: absolute;top: -1100px;left: 600px;position: fixed;
+    }
+    .btn.close{background-image: url(../images/cnt1/gnb_btn_close.png);}
+    
 }
 #cnt1{
     height: 100vh;width: 100%;position: relative;
@@ -154,6 +179,7 @@ body{font-family: spoqa;}
 
 #cnt2{
   position: relative;overflow: hidden;
+ 
   #cnt2_bg{
     position: relative;width: 100%;height: 650px;background-color: #F2F5F5;
     &::after{
@@ -165,7 +191,7 @@ body{font-family: spoqa;}
     100%{transform: translateX(-50%)}
   }
   .introduce{
-    position: relative;margin: 50px 0 0 700px;
+    position: relative;margin: 50px 0 0 700px;border: 1px solid red;
     strong{font-family: optima;font-size: 40px;color: $blue;font-weight: 400;}
     p{
       color: $gray;font-size: 20px;line-height: 2;
@@ -233,8 +259,80 @@ body{font-family: spoqa;}
 }
 
 #cnt4{
-  height: 100vh;
+  position: relative;height: 150vh;font-weight: 300;
   .bg{
-    background: url(../images/cnt4/sulwhasoo_bg.png) no-repeat;width: 1022px;height: 973px;float: right;
+    width: 100%;height: 100%;
+    .bg_img{
+      position: relative;float: right;width: 902px;height: 880px;
+      .txt, img{
+        @include translateY-50;
+        position: absolute;top: 50%;
+      }
+      .txt{
+        left: 20%;text-align: center;
+        h4{font-size: 100px;}
+      }
+      img{right: 5%;}
+    }
+    .next, .prev{
+      position: absolute;top: 50%;left: 885px;cursor: pointer;
+      .next_text, .prev_text{
+        font-size: 12px;
+        span{
+          position: absolute;top: -20px;left: 20px;height: 80px;transition: transform 0.5s;
+          &:nth-child(1){transform: rotate(-110deg);}
+          &:nth-child(2){transform: rotate(-90deg);}
+          &:nth-child(3){transform: rotate(-430deg);}
+          &:nth-child(4){transform: rotate(-410deg);}
+          }
+         &:hover{
+          span{
+            &:nth-child(1){transform: rotate(-130deg);}
+            &:nth-child(2){transform: rotate(-98deg);}
+            &:nth-child(3){transform: rotate(-423deg);}
+            &:nth-child(4){transform: rotate(-390deg);}
+          }
+        }
+      }
+    }
   }
+  .project1{
+    
+    .bg_img{
+      background-image: url(../images/cnt4/sulwhasoo_bg.png);
+      h4{color: $Rbrwn;}
+    }
+    .next_text{color: $blue;}
+  }
+  .project2{
+     visibility: hidden;overflow: hidden;max-height: 0;
+    .bg_img{
+      background-image: url(../images/cnt4/nespresoo_bg.png);
+      h4{color: $blue;}
+    }
+    .prev_text{color: $Rbrwn;}
+  }
+
 }
+
+#footer{
+  position: relative;height: 200px;width: 100%;transition: background-color 1s ease;/* background-color: $pink; */
+  text-align: center;
+  h5{
+    @include translateX-50;
+    position: absolute;top: -30px;left: 50%;font-size: 50px;color: $Rbrwn;
+  } 
+  p{color: $blue;font-size: 30px;padding-top: 80px;}
+}
+
+
+
+ /* .cursor{
+    position: absolute;height: 10px;width: 10px;border-radius: 50%;transform: translateX(-50%) translateY(-50%);z-index: 9999;
+  }
+  .cursor1{
+    background-color: $pink;z-index: 9999;
+  }
+  .cursor2{
+    background-color: $blue;z-index: 9999;
+  } */

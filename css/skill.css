@@ -1,0 +1,34 @@
+#cnt3 #acdnPanel1 #box {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  text-align: center;
+  width: 300px; }
+#cnt3 #acdnPanel1 #box * {
+  height: 50px; }
+#cnt3 #acdnPanel1 #digital {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+  border-radius: 80px;
+  border: 1px solid #707070;
+  width: 500px;
+  font-size: 16px;
+  color: #707070; }
+#cnt3 #acdnPanel1 #btn {
+  width: 100px;
+  border-radius: 50%;
+  background: #A89C8D;
+  font-size: 13px;
+  font-weight: 700;
+  color: #fff; }
+
+/*# sourceMappingURL=skill.css.map */

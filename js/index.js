@@ -1,4 +1,33 @@
 $(document).ready(function() {
+    // #gnb
+    $('.btn').on('click', function () {
+
+        if($(this).hasClass('close')){ //닫기
+            $('html, body').removeAttr('style');
+            $('#dim').fadeOut(function () {
+                $(this).remove();
+            });
+            $('.gnb').animate({opacity: 0}, 300, function () {
+                $(this).css({visibility: 'hidden'}).removeClass('active');
+                $('.btn').removeClass('close');
+            })
+        } else { //열기
+            const wrapHeight = $('#wrap').outerHeight();
+            $('html, body').css({height: wrapHeight, overflow: 'hidden'});
+            $('.gnb').before('<div id="dim"></div>');
+            $('#dim').stop().fadeIn().next().css('visibility', 'visible').find('[data-link="first"]').focus();
+
+            $('.gnb').addClass('active').css({visibility: 'visible'}).delay(500).animate({opacity: 1},500);
+            $('.btn').addClass('close');
+        }
+        //dim을 클릭하면 닫기 버튼을 클릭한것 처럼 동일하게 처리
+        $('#dim').on('click', function () {
+                $('.btn.close').click();
+            });
+        return false;
+    });
+
+
     // #cnt1
     let currentX = '';
     let currentY = '';
@@ -20,10 +49,17 @@ $(document).ready(function() {
         });
     });
 
+    //#cnt2
+/*         $('#cnt2, #cnt4').mousemove(function (e) {
+        $('.cursor1').css({left: e.pageX, top: e.pageY});
+        setTimeout(function() {
+            $('.cursor2').css({left: e.pageX,top: e.pageY});
+          }, 100);
+        }); */
+     
+
+
     // #cnt3
-    /* state정리:
-    1)aria-expanded: 아코디언 패널이 열려있어서 확장된 상태는 true, 비확장된 상태는 false
-    2)aria-expanded="true" 인 경우만 aria-disabled="", true(다시클릭할 수 없는경우) / false(다시 클릭할 수 있는 경우) */
     const $acdn = $('#cnt3 .accordion')
     // 1) header의 초기설정 아코디언 패널이 열려있는지 열려있지 않는지
     $acdn.find('.header').attr({'aria-expanded': false});
@@ -42,4 +78,20 @@ $(document).ready(function() {
         }
         
     });
+
+    // #cnt4
+    $('#cnt4 .next').click('on', function () {
+        $(this).parents('.project1').css({visibility: 'hidden', overflow: 'hidden', maxHeight: 0}).next().css({visibility: 'visible', maxHeight: 5000})
+    });
+    $('#cnt4 .prev').click('on', function () {
+        $(this).parents('.project2').css({visibility: 'hidden', overflow: 'hidden', maxHeight: 0}).prev().css({visibility: 'visible', maxHeight: 5000})
+    });
+
+    // #footer 배경색변경
+    $(window).scroll(function() {
+        if ($(document).height() >= $('#cnt4').scrollTop()) {
+           $('#footer').css('background-color', $(this).attr('data-color')); 
+        }
+        
+      });
 });
