@@ -62,7 +62,9 @@ $(document).ready(function() {
     // #cnt3
     const $acdn = $('#cnt3 .accordion')
     // 1) header의 초기설정 아코디언 패널이 열려있는지 열려있지 않는지
-    $acdn.find('.header').attr({'aria-expanded': false});
+    $acdn.find('.title:nth-of-type(4) .header').addClass('on').attr({'aria-expanded': true, 'aria-disabled': true}).parent().siblings('.title').children().attr({'aria-expanded': false});
+
+    $acdn.find('.panel:nth-of-type(4)').addClass('on').attr({tabIndex : 0});
     // 2) 키보드제어 - 상단방향키(38), 하단방향키(40), home(36), end(35), enter/spacebar(click 이벤트가 대신함)
 
     // 3) 마우스제어 - 클릭이벤트
@@ -92,7 +94,7 @@ $(document).ready(function() {
           const scroll = $(this).scrollTop();
           console.log(scroll); //콘솔로 좌표값 찍어보기
           if (scroll >= 3800) { 
-            $('#footer').css({'background-color': '#EBCBC0', 'transition': 'background-color 1.5s ease'});
+            $('#footer').css({'background-color': ' #f3ddd5', 'transition': 'background-color 1.5s ease'});
           }
       });
 });

@@ -62,6 +62,7 @@
   });
 
   $(document).ready(function () {
+    // skill3
     /* 
      1) 첫번째 .tab과 .tabpanel 활성화 (클래스 추가, tabIndex 0)
      aria의 state 초기 설정
@@ -143,8 +144,63 @@
        //탭패널
        const $targetpanel = $('#' + $tgTab.attr('aria-controls'));
        $targetpanel.addClass('on').attr({'aria-hidden': false, 'tabIndex': 0}).siblings().removeClass('on').attr({'aria-hidden': true, 'tabIndex': -1});
-       
      }
+
+
+     // skill4
+     const $visualCnt = $('#miniSlider .visual ul');
+      /* 이전 버튼 클릭
+      0) 현재 애니메이션 중이라면 함수를 강제로 종료
+      :animated 필터선택자 : 현재 애니메이션 진행여부를 알려줌
+      1) 가장 마지막 li를 복제  .clone()
+      2) ul의 첫번째 자식으로 동적생성 .prepend()
+      3) ul의 margin-left: -400px; (추가된 li 때문에 한칸씩 밀리지 못하도록 제어)
+      4) ul에 .animate({properties}[, duration, easing, complete]) margin-left:0;으로 
+      5) animate() 완료후 마지막 li를 삭제 .remove()
+      */
+      $('#prev').on('click', function () {
+        if ($visualCnt.is(':animated')) return false;
+        $visualCnt.prepend($visualCnt.children().last().clone()).css('marginLeft', -390).animate({marginLeft: 0}, 1000, function () {
+          $(this).children().last().remove();
+          ariaHidden();
+        });
+      });
+    
+      /* 다음 버튼 클릭이벤트
+        0) 현재 애니메이션이 진행중이면 함수 강제 종료
+        1) 가장 첫번째 li를 복제  .clone()
+        2) ul의 마지막 자식으로 동적생성 .append()
+        3) ul에 .animate() margin-left:-400;으로
+        4) animate() 완료후 ul의 margin-left:0으로 되돌리고 그리고 첫번째 li를 삭제
+      */
+      $('#next').on('click', function () {
+        if ($visualCnt.is(':animated')) return false;
+        $visualCnt.append($visualCnt.children().first().clone()).animate({marginLeft: -390}, 1000, function () {
+          $(this).css('marginLeft', 0).children().first().remove();
+          ariaHidden();
+        });
+      });
+
+      // 접근성 추가
+      function ariaHidden() {
+        // 1) 모든 li를 aria-hidden: true 속성 설정
+        $visualCnt.children().attr('aria-hidden', true);
+        // 2) 앞에서 부터 3개만 aria-hidden: false로 바꾸기 .slice(시작인덱스, 종료인덱스) 종료인덱스 자신은 포함하지 않음
+        $visualCnt.children().slice(0,1).attr('aria-hidden', false);
+      }
+      ariaHidden();
+
+
+      // skill5
+      // $('.card').on({
+      //   focusin: function () {
+      //     $(this).addClass('flip');
+      // },
+      //   focusout: function () {
+      //     $(this).removeClass('flip');
+      //   }
+      // });
+
  
  
  });

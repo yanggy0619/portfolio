@@ -1,7 +1,7 @@
 @charset "UTF-8";
 #cnt3 {
   color: #707070; }
-  #cnt3 .panel .wrap {
+  #cnt3 .panel:not(#acdnPanel5) .wrap {
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
@@ -117,5 +117,70 @@
   #cnt3 #acdnPanel3 .main_tab .tabpanel.on {
     visibility: visible;
     max-height: 1000px; }
+  #cnt3 #acdnPanel4 #miniSlider {
+    position: relative;
+    height: 100%;
+    width: 100%; }
+    #cnt3 #acdnPanel4 #miniSlider .visual {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 390px;
+      height: 213px;
+      overflow: hidden; }
+      #cnt3 #acdnPanel4 #miniSlider .visual ul {
+        display: flex;
+        width: 3120px; }
+        #cnt3 #acdnPanel4 #miniSlider .visual ul li {
+          padding: 5px; }
+  #cnt3 #acdnPanel4 .controller button {
+    position: absolute;
+    top: 50%;
+    width: 30px;
+    height: 30px;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border-radius: 50%;
+    font-size: 10px; }
+  #cnt3 #acdnPanel4 #prev {
+    left: 0; }
+  #cnt3 #acdnPanel4 #next {
+    right: 0; }
+  #cnt3 #acdnPanel5 {
+    /* #hor */
+    /* #ver */ }
+    #cnt3 #acdnPanel5 .card {
+      position: relative;
+      perspective: 300px;
+      margin: 80px auto; }
+      #cnt3 #acdnPanel5 .card > div {
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: all 0.5s;
+        transition: transform 1s;
+        backface-visibility: hidden; }
+      #cnt3 #acdnPanel5 .card img {
+        width: 250px; }
+    #cnt3 #acdnPanel5 #hor .front {
+      transform: rotateY(0deg); }
+    #cnt3 #acdnPanel5 #hor .back {
+      transform: rotateY(180deg); }
+    #cnt3 #acdnPanel5 #hor:hover .front, #cnt3 #acdnPanel5 #hor.flip .front {
+      transform: rotateY(-180deg); }
+    #cnt3 #acdnPanel5 #hor:hover .back, #cnt3 #acdnPanel5 #hor.flip .back {
+      transform: rotateY(0deg); }
+    #cnt3 #acdnPanel5 #ver {
+      margin-left: 250px; }
+      #cnt3 #acdnPanel5 #ver .front {
+        transform: rotateX(0deg); }
+      #cnt3 #acdnPanel5 #ver .back {
+        transform: rotateX(-180deg); }
+      #cnt3 #acdnPanel5 #ver:hover .front, #cnt3 #acdnPanel5 #ver.flip .front {
+        transform: rotateX(180deg); }
+      #cnt3 #acdnPanel5 #ver:hover .back, #cnt3 #acdnPanel5 #ver.flip .back {
+        transform: rotateX(0deg); }
 
 /*# sourceMappingURL=skill.css.map */

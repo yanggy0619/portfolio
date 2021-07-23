@@ -1,100 +1,3 @@
-@font-face {
-  font-family: optima;
-  font-style: normal;
-  font-weight: 300;
-  src: url("../fonts/OptimaNovaLTProLight.otf") format("opentype"); }
-@font-face {
-  font-family: optima;
-  font-style: normal;
-  font-weight: 400;
-  src: url("../fonts/OptimaNovaLTProRegular.otf") format("opentype"); }
-@font-face {
-  font-family: optima;
-  font-style: normal;
-  font-weight: 500;
-  src: url("../fonts/OptimaNovaLTProMedium.otf") format("opentype"); }
-@font-face {
-  font-family: optima;
-  font-style: normal;
-  font-weight: 700;
-  src: url("../fonts/OptimaNovaLTProBold.otf") format("opentype"); }
-@font-face {
-  font-family: spoqa;
-  font-style: normal;
-  font-weight: 300;
-  src: url("../fonts/SpoqaHanSansNeo-Light.eot");
-  src: local("Noto Sans KR"), url("../fonts/SpoqaHanSansNeo-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/SpoqaHanSansNeo-Light.woff2") format("woff2"), url("../fonts/SpoqaHanSansNeo-Light.woff") format("woff"), url("../fonts/SpoqaHanSansNeo-Light.otf") format("opentype"); }
-@font-face {
-  font-family: spoqa;
-  font-style: normal;
-  font-weight: 400;
-  src: url("../fonts/SpoqaHanSansNeo-Regular.eot");
-  src: local("Noto Sans KR"), url("../fonts/SpoqaHanSansNeo-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/SpoqaHanSansNeo-Regular.woff2") format("woff2"), url("../fonts/SpoqaHanSansNeo-Regular.woff") format("woff"), url("../fonts/SpoqaHanSansNeo-Regular.otf") format("opentype"); }
-@font-face {
-  font-family: spoqa;
-  font-style: normal;
-  font-weight: 600;
-  src: url("../fonts/SpoqaHanSansNeo-Medium.eot");
-  src: local("Noto Sans KR"), url("../fonts/SpoqaHanSansNeo-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/SpoqaHanSansNeo-Medium.woff2") format("woff2"), url("../fonts/SpoqaHanSansNeo-Medium.woff") format("woff"), url("../fonts/SpoqaHanSansNeo-Medium.otf") format("opentype"); }
-@font-face {
-  font-family: spoqa;
-  font-style: normal;
-  font-weight: 700;
-  src: url("../fonts/SpoqaHanSansNeo-Bold.eot");
-  src: local("Noto Sans KR"), url("../fonts/SpoqaHanSansNeo-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/SpoqaHanSansNeo-Bold.woff2") format("woff2"), url("../fonts/SpoqaHanSansNeo-Bold.woff") format("woff"), url("../fonts/SpoqaHanSansNeo-Bold.otf") format("opentype"); }
-body, h1, h2, h3, h4, h5, h6, p, ul, button, figure {
-  margin: 0;
-  padding: 0; }
-
-h1, h2, h3, h4, h5, h6 {
-  font-size: 100%; }
-
-ul {
-  list-style: none; }
-
-a:link, a:visited, a:hover, a:active {
-  text-decoration: none;
-  color: inherit; }
-
-img {
-  vertical-align: top; }
-
-button {
-  border: none;
-  background: none;
-  cursor: pointer; }
-
-input[type="text"] {
-  border: 1px solid #aaa;
-  border-radius: 0; }
-
-button, input {
-  font-family: inherit;
-  font-size: inherit;
-  color: inherit; }
-
-address {
-  font-style: normal; }
-
-header, nav, section, footer {
-  display: block; }
-
-.blind {
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  border: none;
-  position: absolute;
-  clip: rect(1px, 1px, 1px, 1px);
-  clip-path: inset(50%); }
-
-* {
-  box-sizing: border-box; }
-
-body {
-  font-family: spoqa;
-  color: #707070; }
-
 .txt_wrap {
   padding-left: 200px; }
   .txt_wrap h2 {
@@ -105,15 +8,6 @@ body {
 #cnt1, #cnt2, #cnt3, #cnt4 {
   padding-top: 200px; }
 
-#dim {
-  background: rgba(0, 0, 0, 0.5);
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 99; }
-
 /* #loading{
     @include flex;
     @include justify-content;
@@ -122,67 +16,11 @@ body {
     svg{position: absolute;top: 30%;left: 15%;z-index: -1;}
     h1{font-family: "optima";font-size: 150px;color: $blue;text-align: center;}
 } */
-#header {
-  pointer-events: none; }
-  #header .util {
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-justify-content: space-between;
-    justify-content: space-between;
-    position: fixed;
-    width: 100%;
-    padding: 50px;
-    z-index: 102; }
-    #header .util .btn {
-      background: url(../images/cnt1/gnb_btn.png);
-      width: 75px;
-      height: 78px;
-      pointer-events: auto; }
-  #header .gnb {
-    position: fixed; }
-  #header .gnb {
-    opacity: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 101;
-    top: 10%;
-    right: -50%;
-    font-family: optima;
-    font-size: 50px;
-    color: #B08069; }
-    #header .gnb ul li {
-      margin-top: 30px; }
-      #header .gnb ul li span {
-        padding-left: 50px; }
-  #header .gnb_bg {
-    background: #E6F0F5;
-    border-radius: 50%;
-    position: absolute;
-    top: -1100px;
-    left: 2500px;
-    width: 1px;
-    height: 1px;
-    transition: all 0.5s;
-    z-index: 100; }
-  #header .gnb.active + .gnb_bg {
-    background: #E6F0F5;
-    border-radius: 50%;
-    width: 1912px;
-    height: 2001px;
-    position: absolute;
-    top: -1100px;
-    left: 600px;
-    position: fixed; }
-  #header .btn.close {
-    background-image: url(../images/cnt1/gnb_btn_close.png); }
-
 #cnt1 {
   height: 100vh;
   width: 100%;
-  position: relative; }
+  position: relative;
+  background: linear-gradient(-217deg, #e6f0f5, rgba(255, 0, 0, 0) 40%); }
   #cnt1 .bg_img {
     margin-left: 550px;
     background: url(../images/cnt1/cnt1_image.png) no-repeat;
@@ -458,26 +296,6 @@ body {
         color: #7D9BA8; }
     #cnt4 .project2 .prev_text {
       color: #B08069; }
-
-#footer {
-  position: relative;
-  height: 200px;
-  width: 100%;
-  /* background-color: $pink; */
-  text-align: center; }
-  #footer h5 {
-    -webkit-transform: translateX(-50%);
-    -moz-transform: translateX(-50%);
-    transform: translateX(-50%);
-    position: absolute;
-    top: -30px;
-    left: 50%;
-    font-size: 50px;
-    color: #B08069; }
-  #footer p {
-    color: #7D9BA8;
-    font-size: 30px;
-    padding-top: 80px; }
 
 /* .cursor{
    position: absolute;height: 10px;width: 10px;border-radius: 50%;transform: translateX(-50%) translateY(-50%);z-index: 9999;

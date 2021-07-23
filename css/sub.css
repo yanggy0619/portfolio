@@ -1,0 +1,87 @@
+.bg {
+  position: relative;
+  overflow: hidden; }
+  .bg .cover {
+    background: url(../images/sulwhasoo/main.png) 50% 50%/cover;
+    width: 1920px;
+    height: 700px;
+    transition: all 0.8s cubic-bezier(0.3, 0.1, 0.1, 1); }
+  .bg .txt {
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 120px;
+    font-weight: 700;
+    font-family: optima;
+    -webkit-text-stroke: 1px #B08069;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.8s cubic-bezier(0.3, 0.1, 0.1, 1); }
+  .bg a:hover .txt, .bg a:focus .txt {
+    -webkit-text-fill-color: #B08069;
+    font-size: 110px; }
+  .bg a:hover .cover {
+    transform: scale(1.1); }
+
+h3 {
+  color: #B08069;
+  font-family: optima;
+  font-size: 40px;
+  width: 20%;
+  margin-left: 50px; }
+
+.sticky {
+  position: sticky;
+  top: 90px; }
+
+.pro_intro {
+  border: 1px solid #000;
+  margin: 100px; }
+  .pro_intro h2 {
+    color: #7D9BA8;
+    font-family: optima;
+    font-size: 50px;
+    padding-bottom: 10px; }
+  .pro_intro p {
+    padding-top: 5px; }
+
+.wirframe {
+  height: 100vh; }
+  .wirframe img {
+    float: right;
+    width: 80%; }
+
+.design .wrap {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  align-items: center; }
+.design .color_wrap .color {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%; }
+.design .color_wrap #color1 {
+  background: #F57E3C; }
+.design .color_wrap #color2 {
+  background: #FCB95E; }
+.design .color_wrap #color3 {
+  background: #FCF8F1; }
+.design .color_wrap #color4 {
+  background: #3B3B3B; }
+.design .color_wrap #color5 {
+  background: url(../images/sulwhasoo/pattern.png); }
+.design .txt_type p:first-child {
+  font-family: optima;
+  font-size: 20px; }
+.design .txt_type p:last-child {
+  font-family: spoqa;
+  font-size: 20px; }
+
+/*# sourceMappingURL=sub.css.map */
