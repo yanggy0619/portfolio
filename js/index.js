@@ -88,10 +88,11 @@ $(document).ready(function() {
     });
 
     // #footer 배경색변경
-    $(window).scroll(function() {
-        if ($(document).height() >= $('#cnt4').scrollTop()) {
-           $('#footer').css('background-color', $(this).attr('data-color')); 
-        }
-        
+    $(document).scroll(function() {
+          const scroll = $(this).scrollTop();
+          console.log(scroll); //콘솔로 좌표값 찍어보기
+          if (scroll >= 3800) { 
+            $('#footer').css({'background-color': '#EBCBC0', 'transition': 'background-color 1.5s ease'});
+          }
       });
 });

@@ -1,34 +1,121 @@
-#cnt3 #acdnPanel1 #box {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  text-align: center;
-  width: 300px; }
-#cnt3 #acdnPanel1 #box * {
-  height: 50px; }
-#cnt3 #acdnPanel1 #digital {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  align-items: center;
-  border-radius: 80px;
-  border: 1px solid #707070;
-  width: 500px;
-  font-size: 16px;
+@charset "UTF-8";
+#cnt3 {
   color: #707070; }
-#cnt3 #acdnPanel1 #btn {
-  width: 100px;
-  border-radius: 50%;
-  background: #A89C8D;
-  font-size: 13px;
-  font-weight: 700;
-  color: #fff; }
+  #cnt3 .panel .wrap {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center; }
+  #cnt3 #acdnPanel1 #box {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    text-align: center;
+    width: 300px; }
+  #cnt3 #acdnPanel1 #box * {
+    height: 50px; }
+  #cnt3 #acdnPanel1 #digital {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    align-items: center;
+    border-radius: 80px;
+    border: 1px solid #707070;
+    width: 500px;
+    font-size: 16px;
+    color: #707070; }
+  #cnt3 #acdnPanel1 #btn {
+    width: 100px;
+    border-radius: 50%;
+    background: #A89C8D;
+    font-size: 13px;
+    font-weight: 700;
+    color: #fff; }
+  #cnt3 #acdnPanel2 {
+    /* txtBox */
+    /* #txtBox ul li:nth-child(1){animation: txtup 10s ease 0s infinite normal none;} 생략하지 않은 경우*/
+    /* 5%만큼 상단이동 후 28%는 정지상태유지 */ }
+    #cnt3 #acdnPanel2 #txtBox {
+      width: 400px;
+      text-align: center;
+      line-height: 50px;
+      font-weight: 900;
+      font-size: 40px;
+      color: #555; }
+    #cnt3 #acdnPanel2 #txtBox ul {
+      height: 50px;
+      color: #fff;
+      overflow: hidden; }
+    #cnt3 #acdnPanel2 #txtBox ul li {
+      margin-bottom: 50px; }
+    #cnt3 #acdnPanel2 #txtBox ul li:nth-child(1) {
+      -webkit-animation: txtup 10s ease  infinite;
+      -moz-animation: txtup 10s ease  infinite;
+      -o-animation: txtup 10s ease  infinite;
+      animation: txtup 10s ease  infinite; }
+    #cnt3 #acdnPanel2 #txtBox ul li span {
+      display: inline-block;
+      padding: 0 15px; }
+    #cnt3 #acdnPanel2 #txtBox ul li:nth-child(1) span {
+      background: red; }
+    #cnt3 #acdnPanel2 #txtBox ul li:nth-child(2) span {
+      background: blue; }
+    #cnt3 #acdnPanel2 #txtBox ul li:nth-child(3) span {
+      background: green; }
+@keyframes txtup {
+  0% {
+    margin-top: 100px; }
+  5% {
+    margin-top: 0px; }
+  33% {
+    margin-top: 0px; }
+  38% {
+    margin-top: -100px; }
+  66% {
+    margin-top: -100px; }
+  71% {
+    margin-top: -200px; }
+  99% {
+    margin-top: -200px; }
+  100% {
+    margin-top: -250px; } }
+  #cnt3 #acdnPanel3 .main_tab {
+    width: 400px; }
+  #cnt3 #acdnPanel3 .main_tab > ul {
+    display: flex; }
+  #cnt3 #acdnPanel3 .main_tab > ul li {
+    width: calc(100% / 3);
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background: #E6F0F5;
+    cursor: pointer; }
+  #cnt3 #acdnPanel3 .main_tab > ul li + li {
+    border-left: 1px solid #000; }
+  #cnt3 #acdnPanel3 .main_tab > ul li.on {
+    background: beige; }
+  #cnt3 #acdnPanel3 .main_tab .tabpanel {
+    visibility: hidden;
+    max-height: 0;
+    overflow: hidden;
+    height: 150px;
+    text-align: center;
+    font-size: 12px;
+    background: beige; }
+  #cnt3 #acdnPanel3 .main_tab .tabpanel.on {
+    visibility: visible;
+    max-height: 1000px; }
 
 /*# sourceMappingURL=skill.css.map */

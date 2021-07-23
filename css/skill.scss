@@ -2,6 +2,14 @@
 @import  "_var", "_mixin", "_funcion";
 
 #cnt3{
+    color:$gray;
+    .panel{
+        .wrap{
+            @include flex;
+            @include align-items;
+            @include justify-content;
+        }
+    }
     #acdnPanel1{
         #box{
             @include flex;
@@ -15,4 +23,43 @@
             border-radius: 80px;border: 1px solid $gray;width: 500px;font-size: 16px;color: $gray;}
             #btn{width: 100px;border-radius: 50%;background: $brwn;font-size: 13px;font-weight: 700;color: #fff;}
     }
+
+    #acdnPanel2{
+    /* txtBox */
+    #txtBox{width: 400px;text-align: center;line-height: 50px;font-weight: 900;font-size: 40px;color:#555;}
+    #txtBox ul{height: 50px;color: #fff;overflow: hidden;}
+    #txtBox ul li{margin-bottom: 50px;}
+    /* #txtBox ul li:nth-child(1){animation: txtup 10s ease 0s infinite normal none;} 생략하지 않은 경우*/
+    #txtBox ul li:nth-child(1){-webkit-animation: txtup 10s ease  infinite;-moz-animation: txtup 10s ease  infinite;-o-animation: txtup 10s ease  infinite;animation: txtup 10s ease  infinite;}
+    #txtBox ul li span{display: inline-block;padding: 0 15px;}
+    #txtBox ul li:nth-child(1) span{background: red;}
+    #txtBox ul li:nth-child(2) span{background: blue;}
+    #txtBox ul li:nth-child(3) span{background: green;}
+
+    /* 5%만큼 상단이동 후 28%는 정지상태유지 */
+    @keyframes txtup {
+        0%{margin-top: 100px;}
+        5%{margin-top: 0px;}
+        33%{margin-top: 0px;}
+        38%{margin-top: -100px;}
+        66%{margin-top: -100px;}
+        71%{margin-top: -200px;}
+        99%{margin-top: -200px;}
+        100%{margin-top: -250px;}
+    }    
+    }
+
+    #acdnPanel3{
+        .main_tab{width: 400px;}
+        .main_tab > ul{display: flex;}
+        .main_tab > ul li{width: calc(100% / 3);height: 50px;line-height: 50px;text-align: center;background: $skyblue;cursor: pointer;}
+        .main_tab > ul li + li{border-left: 1px solid #000;}
+        .main_tab > ul li.on{background: beige;}
+        .main_tab .tabpanel{visibility: hidden;max-height: 0;overflow: hidden;height: 150px;text-align: center;font-size: 12px;background: beige;}
+        .main_tab .tabpanel.on{visibility: visible;max-height: 1000px;}
+
+    }
+
+    #acdnPanel4{}
+    #acdnPanel5{}
 }

@@ -319,6 +319,8 @@ body {
         color: #7D9BA8; }
       #cnt3 .accordion .title:nth-of-type(3) .bdline {
         background-color: #7D9BA8; }
+    #cnt3 .accordion .panel:nth-of-type(3) {
+      color: #7D9BA8; }
     #cnt3 .accordion .title:nth-of-type(4) {
       background-color: #B08069; }
     #cnt3 .accordion .title:nth-of-type(5) {
@@ -461,7 +463,6 @@ body {
   position: relative;
   height: 200px;
   width: 100%;
-  transition: background-color 1s ease;
   /* background-color: $pink; */
   text-align: center; }
   #footer h5 {

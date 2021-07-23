@@ -88,8 +88,8 @@
             </div>
           </div>
           <div class="about">
-            <strong>JAVASCRIPT</strong>
-            <p>디지털시계 : 실시간으로 시계가 업데이트됩니다.
+            <strong>디지털시계</strong>
+            <p>자바스크립트로 구현한 디지털 시계입니다.<br> 현재 시간이 실시간으로 업데이트 되며<br> stop 버튼을 클릭했을때 시계가 멈춥니다.
             </p>
           </div>
         </div>
@@ -100,7 +100,16 @@
           </button>
         </h3>
         <div role="region" aria-labelledby="acdnHeader2" id="acdnPanel2" class="panel">
-          <div class="wrap"></div>
+          <div class="wrap">
+            <div id="txtBox">
+              <p>MAKE <br>AWESOME!</p>
+              <ul>
+                  <li><span>HTML5 + CSS3</span></li>
+                  <li><span>Web Accessibility</span></li>
+                  <li><span>Team Project</span></li>
+              </ul>
+          </div> 
+          </div>
           <div class="about">
             <strong>접근성을 고려한 마크업</strong>
             <p>짜임새 있는 문서, 시멘틱한 마크업, 웹접근성과<br>검색엔진최적화로 이루어지며 문서의 구조를 잘<br> 담아내고 콘텐츠의 의미를 올바르게 전달 할 수<br> 있도록 노력하고 있습니다.
@@ -114,7 +123,18 @@
           </button>
         </h3>
         <div role="region" aria-labelledby="acdnHeader3" id="acdnPanel3" class="panel">
-          <div class="wrap"></div>
+          <div class="wrap">
+            <div id="mainTab" class="main_tab">
+                <ul role="tablist" aria-label="회사소개" class="tblist">
+                   <li role="tab" aria-controls="tabpanel1" id="tab1" class="tab first">인사말</li>
+                   <li role="tab" aria-controls="tabpanel2" id="tab2" class="tab">오시는길</li>
+                   <li role="tab" aria-controls="tabpanel3" id="tab3" class="tab last">CI,BI</li>
+                 </ul>
+                 <div role="tabpanel" aria-labelledby="tab1" id="tabpanel1"class="tabpanel">탭상세내용1</div>
+                 <div role="tabpanel" aria-labelledby="tab2" id="tabpanel2"class="tabpanel">탭상세내용2</div>
+                 <div role="tabpanel" aria-labelledby="tab3" id="tabpanel3"class="tabpanel">탭상세내용3</div>
+             </div>
+          </div>
           <div class="about">
             <strong>접근성을 고려한 마크업</strong>
             <p>짜임새 있는 문서, 시멘틱한 마크업, 웹접근성과<br>검색엔진최적화로 이루어지며 문서의 구조를 잘<br> 담아내고 콘텐츠의 의미를 올바르게 전달 할 수<br> 있도록 노력하고 있습니다.
@@ -128,7 +148,26 @@
           </button>
         </h3>
         <div role="region" aria-labelledby="acdnHeader4" id="acdnPanel4" class="panel">
-          <div class="wrap"></div>
+          <div class="wrap">
+            <div id="miniSlider">
+              <div class="visual" aria-live="polite"><!-- 가로 1200, overflow: hidden 숨기기 -->
+                <ul><!-- 모두 10장의 사진이 들어갈수 있도록 가로 크기 설정 -->
+                  <li><img src="images/cnt3/minislider_photo00.jpg" alt="..."></li>
+                  <li><img src="images/cnt3/minislider_photo01.jpg" alt="..."></li>
+                  <li><img src="images/cnt3/minislider_photo02.jpg" alt="..."></li>
+                  <li><img src="images/cnt3/minislider_photo03.jpg" alt="..."></li>
+                  <li><img src="images/cnt3/minislider_photo04.jpg" alt="..."></li>
+                  <li><img src="images/cnt3/minislider_photo05.jpg" alt="..."></li>
+                  <li><img src="images/cnt3/minislider_photo06.jpg" alt="..."></li>
+                  <li><img src="images/cnt3/minislider_photo07.jpg" alt="..."></li>
+                </ul>
+              </div>
+              <div class="controller">
+                <button type="button" id="prev">Prev</button>
+                <button type="button" id="next">Next</button>
+              </div>
+            </div>
+          </div>
           <div class="about">
             <strong>접근성을 고려한 마크업</strong>
             <p>짜임새 있는 문서, 시멘틱한 마크업, 웹접근성과<br>검색엔진최적화로 이루어지며 문서의 구조를 잘<br> 담아내고 콘텐츠의 의미를 올바르게 전달 할 수<br> 있도록 노력하고 있습니다.
@@ -211,7 +250,7 @@
         </div>
       </div>
     </section>
-    <footer id="footer" data-color="#EBCBC0">
+    <footer id="footer">
       <div class="contact">
         <h5>CONTACT</h5>
         <p>LET'S WORK TOGETHER</p>
