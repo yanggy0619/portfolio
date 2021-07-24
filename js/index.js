@@ -1,5 +1,15 @@
 $(document).ready(function() {
+    // cursor
+    $(document)
+  .mousemove(function(e) {
+    $('.cursor').eq(0).css({left: e.pageX,top: e.pageY});
+    setTimeout(function() {
+      $('.cursor').eq(1).css({left: e.pageX,top: e.pageY});
+    }, 100);
+  })
+
     // #gnb
+    $('.gnb').css({visibility: 'hidden',maxHeight: 0, overflow: 'hidden'});
     $('.btn').on('click', function () {
 
         if($(this).hasClass('close')){ //닫기
@@ -17,7 +27,7 @@ $(document).ready(function() {
             $('.gnb').before('<div id="dim"></div>');
             $('#dim').stop().fadeIn().next().css('visibility', 'visible').find('[data-link="first"]').focus();
 
-            $('.gnb').addClass('active').css({visibility: 'visible'}).delay(500).animate({opacity: 1},500);
+            $('.gnb').addClass('active').css({visibility: 'visible', maxHeight: '1000px'}).delay(500).animate({opacity: 1},500);
             $('.btn').addClass('close');
         }
         //dim을 클릭하면 닫기 버튼을 클릭한것 처럼 동일하게 처리
@@ -48,14 +58,6 @@ $(document).ready(function() {
             $(el).css('top', newY + 'px');
         });
     });
-
-    //#cnt2
-/*         $('#cnt2, #cnt4').mousemove(function (e) {
-        $('.cursor1').css({left: e.pageX, top: e.pageY});
-        setTimeout(function() {
-            $('.cursor2').css({left: e.pageX,top: e.pageY});
-          }, 100);
-        }); */
      
 
 
@@ -80,6 +82,10 @@ $(document).ready(function() {
         }
         
     });
+    $acdn.find('.header').mouseenter(function () {
+        $(this).addClass('clickm')
+    });
+
 
     // #cnt4
     $('#cnt4 .next').click('on', function () {

@@ -1,5 +1,10 @@
 @charset "utf-8";
 @import  "_var", "_mixin", "_funcion";
+#project1{
+
+h3{color: $Rbrwn;font-family: optima;font-size: 30px;padding: 50px 0;}
+.width1440{width: 1440px;margin: 0 auto;}
+
 
 .bg{
     position: relative;overflow: hidden;
@@ -12,17 +17,19 @@
     a:hover .txt, a:focus .txt{-webkit-text-fill-color: $Rbrwn;font-size: 110px;}
     a:hover .cover{transform: scale(1.1);}
 }
-h3{color: $Rbrwn;font-family: optima;font-size: 40px;width: 20%;margin-left: 50px;}
-.sticky{position: sticky;top: 90px;}
 
 .pro_intro{
-    border: 1px solid #000;margin: 100px;
-    h2{color: $blue;font-family: optima;font-size: 50px;padding-bottom: 10px;}
-    p{padding-top: 5px;}
+    margin: 100px;text-align: center;
+    h2{
+        position: relative;color: $blue;font-family: optima;font-size: 50px;padding-bottom: 10px;
+        &::before, &::after{content:"";position: absolute;top: 50%;background: $blue;height: 2px;width: 200px;}
+        &::before{left: 20%;}
+        &::after{right: 20%;}
+    }
+    p{padding-top: 10px;}
 }
 .wirframe{
-    height: 100vh;
-    img{float: right;width: 80%;}
+    img{display: block;margin: 0 auto;}
 }
 
 .design{
@@ -32,8 +39,9 @@ h3{color: $Rbrwn;font-family: optima;font-size: 40px;width: 20%;margin-left: 50p
         @include align-items;
     }
     .color_wrap{
+        padding: 50px;
         .color{
-            height: 50px;width: 50px;border-radius:50%;
+            height: 50px;width: 50px;border-radius:50%;margin: 0 auto;
         }
         #color1{background: #F57E3C;}
         #color2{background: #FCB95E;}
@@ -42,8 +50,136 @@ h3{color: $Rbrwn;font-family: optima;font-size: 40px;width: 20%;margin-left: 50p
         #color5{background: url(../images/sulwhasoo/pattern.png);}
      
     }
-    .txt_type{
-        p:first-child{font-family: optima;font-size: 20px;}
-        p:last-child{font-family: spoqa;font-size: 20px;}
+}
+.index{
+    .index_content{
+        @include flex;
+        width: 100%;
+        img{width: 50%;}
+        .index_intro{
+            width: 50%;
+            .bg{
+                background: url(../images/sulwhasoo/pattern_bg.png);margin-left: 20px;text-align: center;
+                strong{color:$blue;font-size: 50px;display: block;}
+                #intro1, #intro2, #intro3, #intro4{margin-bottom: 40px;}
+                p{padding-top: 20px;}
+                #intro1{
+                  margin-top: 50px;
+                  img{text-align: center;}
+                }
+                #intro2{
+                    img{width: 15%;padding: 5px;}
+
+                }
+                #intro4{
+                    img{width: 30%;}
+                }
+            }
+            
+        }
     }
 }
+
+.Flagship{
+    margin-bottom: 100px;
+    .flag_wrap{
+        @include flex;
+        width: 100%;
+        img{width: 50%;}
+        .flag_txt{
+            @include flex;
+            @include justify-content;
+            @include align-items;
+           width: 50%;margin-left: 20px;
+           p{text-align: center;background: url(../images/sulwhasoo/pattern_bg.png);padding: 30px;} 
+        }
+    }
+    
+    
+}
+
+}
+
+
+#project2{
+
+    h3{color: $blue;font-family: optima;font-size: 30px;padding: 50px 0;}
+    .width1440{width: 1440px;margin: 0 auto;}
+    
+    
+    .bg{
+        position: relative;overflow: hidden;
+       .cover{background: url(../images/nespresso/bg.jpg) left top / cover;width: 1920px;height: 700px; transition: all 0.8s cubic-bezier(0.3, 0.1, 0.1, 1);} 
+       .txt{
+           @include translate-50;
+           position: absolute;top: 50%;left: 50%;
+           font-size: 120px;font-weight: 700;font-family: optima;  -webkit-text-stroke: 1px $blue;  -webkit-text-fill-color:transparent; transition: all 0.8s cubic-bezier(0.3, 0.1, 0.1, 1);
+        }
+        a:hover .txt, a:focus .txt{-webkit-text-fill-color: $blue;font-size: 110px;}
+        a:hover .cover{transform: scale(1.1);}
+    }
+    
+    .pro_intro{
+        margin: 100px;text-align: center;
+        h2{
+            position: relative;color: $Rbrwn;font-family: optima;font-size: 50px;padding-bottom: 10px;
+            &::before, &::after{content:"";position: absolute;top: 50%;background: $Rbrwn;height: 2px;width: 200px;}
+            &::before{left: 20%;}
+            &::after{right: 20%;}
+        }
+        p{padding-top: 10px;}
+    }
+    .Responsive{
+        img{width: 100%;}
+    }
+    
+    .design{
+        .wrap{
+            @include flex;
+            @include justify-content;
+            @include align-items;
+        }
+        .color_wrap{
+            padding: 50px;
+            .color{
+                height: 50px;width: 50px;border-radius:50%;margin: 0 auto;
+            }
+            #color1{background: #AAB3AB;}
+            #color2{background: #68787A;}
+            #color3{background: #DDD0C1;}
+            #color4{background: #918270;}
+            #color5{background: #7D7D7D;}
+         
+        }
+    }
+    .index{
+        margin-bottom: 100px;
+        .index_content{
+            @include flex;
+            width: 100%;
+            img{width: 50%;}
+            .index_intro{
+                width: 50%;
+                .bg{
+                    background: url(../images/sulwhasoo/pattern_bg.png);margin-left: 20px;text-align: center;
+                    strong{color:$blue;font-size: 50px;display: block;}
+                    #intro1, #intro2, #intro3, #intro4{margin-bottom: 40px;}
+                    p{padding-top: 20px;}
+                    #intro1{
+                      margin-top: 50px;
+                      img{text-align: center;}
+                    }
+                    #intro2{
+                        img{width: 15%;padding: 5px;}
+    
+                    }
+                    #intro4{
+                        img{width: 30%;}
+                    }
+                }
+                
+            }
+        }
+    }
+    
+    }
