@@ -123,17 +123,20 @@ h3{color: $Rbrwn;font-family: optima;font-size: 30px;padding: 50px 0;}
         margin: 100px;text-align: center;
         h2{
             position: relative;color: $Rbrwn;font-family: optima;font-size: 50px;padding-bottom: 10px;
-            &::before, &::after{content:"";position: absolute;top: 50%;background: $Rbrwn;height: 2px;width: 200px;}
+            &::before, &::after{content:"";position: absolute;top: 50%;background: $Rbrwn;height: 2px;width: 180px;}
             &::before{left: 20%;}
             &::after{right: 20%;}
         }
         p{padding-top: 10px;}
     }
     .Responsive{
+        position: relative;
         img{width: 100%;}
+        p{position: absolute;bottom: -60px;right: 0;}
     }
     
     .design{
+        padding-top: 50px;
         .wrap{
             @include flex;
             @include justify-content;
@@ -157,27 +160,35 @@ h3{color: $Rbrwn;font-family: optima;font-size: 30px;padding: 50px 0;}
         .index_content{
             @include flex;
             width: 100%;
-            img{width: 50%;}
-            .index_intro{
-                width: 50%;
-                .bg{
-                    background: url(../images/sulwhasoo/pattern_bg.png);margin-left: 20px;text-align: center;
-                    strong{color:$blue;font-size: 50px;display: block;}
-                    #intro1, #intro2, #intro3, #intro4{margin-bottom: 40px;}
-                    p{padding-top: 20px;}
-                    #intro1{
-                      margin-top: 50px;
-                      img{text-align: center;}
-                    }
-                    #intro2{
-                        img{width: 15%;padding: 5px;}
-    
-                    }
-                    #intro4{
-                        img{width: 30%;}
+            >img{width: 50%;}
+        }
+        .index_intro{
+            .bg{
+                background: #f5f3f0;margin-left: 20px;text-align: center;
+                strong{color:$Rbrwn;font-size: 50px;display: block;margin-bottom: 10px;}
+                #intro1, #intro2, #intro3, #intro4, #intro5, #intro6{margin-bottom: 40px;}
+                p{padding-top: 20px;}
+                #intro1{
+                    position: relative;margin-top: 50px;
+                    img{
+                      text-align: center;width: 50%;
+                      &:nth-of-type(2){
+                          @include translateY-50;
+                          position: absolute;top: 50%;left: 50%;width: 150px;
+                        }
                     }
                 }
-                
+                #intro5{
+                    position: relative;
+                    img{
+                        padding: 0 60px;
+                        &:nth-child(3){
+                            @include translate-50;
+                            position: absolute;top: 50%;left: 50%;
+                        }
+
+                    }
+                }
             }
         }
     }
