@@ -24,8 +24,8 @@
   #cnt1 .bg_img {
     margin-left: 550px;
     background: url(../images/cnt1/cnt1_image.png) no-repeat;
-    width: 555px;
-    height: 673px; }
+    width: 622px;
+    height: 777px; }
   #cnt1 .txt {
     position: absolute;
     font-family: optima;
@@ -39,7 +39,7 @@
     animation-delay: 0.6s; }
   #cnt1 .txt:nth-of-type(3) {
     bottom: 100px;
-    right: 300px;
+    right: 260px;
     color: #7D9BA8;
     animation-delay: 1.5s; }
 @keyframes txtAni {
@@ -111,7 +111,7 @@
   #cnt2 .introduce {
     position: relative;
     margin: 50px 0 0 700px;
-    border: 1px solid red; }
+    /* border: 1px solid red; */ }
     #cnt2 .introduce strong {
       font-family: optima;
       font-size: 40px;
