@@ -6,31 +6,21 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title> 양가영 포트폴리오 </title>
-  <link href="https://fonts.googleapis.com/css?family=Abril+Fatface:regular" rel="stylesheet">
   <link rel="stylesheet" href="css/common.css">
   <link rel="stylesheet" href="css/index.css">
   <link rel="stylesheet" href="css/skill.css">
   <script src="js/jquery-1.12.4.min.js"></script>
+  <script src="js/common.js"></script>
   <script src="js/index.js"></script>
   <script src="js/skill.js"></script>
+  
 </head>
 
 <body>
-  <!-- <div class='cursor'></div>
-  <div class='cursor'></div> -->
-  <!-- <div id="loading">
-      <svg 
-        xmlns="http://www.w3.org/2000/svg"
-        xmlns:xlink="http://www.w3.org/1999/xlink"
-        width="202px" height="202px">
-    <image  x="0px" y="0px" width="202px" height="202px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMoAAADKCAMAAADTuy+aAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAC9FBMVEXry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8Dry8D////A+f10AAAA+nRSTlMACTBXfZmxx9zt7vr37N3GrpJ5KwUGOnOq/vnSo2cp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" />
-      </svg>
-      <h1>PORTFOLIO</h1>
-  </div> -->
   <div id="wrap">
     <header id="header">
       <div class="util">
-        <h1 class="logo"><a href=""><img src="images/cnt1/logo.png" alt=""></a></h1>
+        <h1 class="logo"><a href="index.html"><img src="images/cnt1/logo.png" alt=""></a></h1>
         <a class="btn last" href=""></a>
       </div>
 
@@ -53,6 +43,7 @@
       <div class="deco2 mouseM"></div>
       <div class="deco3 mouseM"></div>
       <div class="deco4 mouseM"></div>
+      <p>웹퍼블리셔를 꿈꾸는 양가영입니다.</p>
     </section>
     <section id="cnt2">
       <div id="cnt2_bg">
@@ -60,17 +51,85 @@
           <h2>ABOUT ME</h2>
           <p>저에 대해 소개해드립니다.</p>
         </div>
-        <div class="introduce">
-          <strong>WHO?</strong>
-          <p><span>이름</span> : 양가영</p>
-          <p><span>생년월일</span> : 1995.06.19</p>
-          <p><span>이메일</span> : did-619@naver.com</p>
-          <p><span>거주지</span> : 경기도 성남시</p>
-          <p><span>언어</span> : 중국어, 영어</p>
-          <p><span>최종학력</span> : 단국대학교 경영학과</p>
-        </div>
+
+        <div class="intro_tab">
+          <div id="mainTab" class="main_tab">
+            <ul role="tablist" aria-label="회사소개" class="tablist">
+              <li role="tab" aria-controls="tabpanel1" id="tab1" class="tab first">PROFILE</li>
+              <li role="tab" aria-controls="tabpanel2" id="tab2" class="tab">CERTIFICATE</li>
+              <li role="tab" aria-controls="tabpanel3" id="tab3" class="tab last">WHO AM I?</li>
+            </ul>
+            <div role="tabpanel" aria-labelledby="tab1" id="tabpanel1" class="tabpanel">
+            <a class="introduce">
+              <p><span>이름</span> : 양가영</p>
+              <p><span>생년월일</span> : 1995.06.19</p>
+              <p><span>이메일</span> : did-619@naver.com</p>
+              <p><span>거주지</span> : 경기도 성남시</p>
+              <p><span>언어</span> : 중국어, 영어</p>
+              <p><span>최종학력</span> : 단국대학교 경영학과</p>
+            </a>
+            <img class="move_img" src="images/cnt2/cnt2_pic.jpg" alt="">
+          </div>
+          <div role="tabpanel" aria-labelledby="tab2" id="tabpanel2" class="tabpanel">
+            <div id="education" class="about">
+              <strong>Education</strong>
+                <div class="skill_txt">
+                  <div>2018.08  <span>단국대학교 경영학과 졸업</span></div>
+                  <div>2013  <span>중국소재 고등학교 졸업</span></div>
+                </div>
+            </div>
+            <div id="experience" class="about">
+              <strong>Experience</strong>
+                <div class="skill_txt">
+                  <div>2020.03  <span>주식회사 티엠나인</span></div>
+                </div>
+            </div>
+            <div id="certificate" class="about">
+              <strong>Certificate</strong>
+              <div class="skill_txt">
+                <div>2020.03  <span>1종보통 운전면허</span></div>
+                <div>2019.11  <span>토익</span></div>
+                <div>2019.05  <span>컴퓨터활용능력2급</span></div>
+                <div>2018.08  <span>신HSK 6급</span></div>
+              </div>
+            </div>
+            <div id="skill" class="about">
+              <strong>skill</strong>
+              <div class="skill_txt">
+                <div><span>Adobe Photoshop</span><span class="bar"></span></div>
+                <div><span>Adobe XD</span><span class="bar"></span></div>
+                <div><span>Zeplin<span class="bar"></span></span></div>
+                <div><span>Html / CSS<span class="bar"></span></span></div>
+                <div><span>SASS<span class="bar"></span></span></div>
+                <div><span>JavaScript<span class="bar"></span></span></div>
+                <div><span>Jquery<span class="bar"></span></span></div>
+              </div>
+            </div>
+
+            
+          </div>
+          <div role="tabpanel" aria-labelledby="tab3" id="tabpanel3" class="tabpanel">
+            <div id="who">
+              <div>
+                <p>트렌드에 민감한</p>
+                <p>소통을 잘하는</p>
+                <p>웹표준을 따르는 </p>
+              </div>
+              <div>
+                <span class="move">웹퍼블리셔가 되겠습니다.</span>
+              </div>
+              
+            </div>
+          </div>
+          </div>
+          
+          
+          </div>
+
+        
       </div>
     </section>
+
     <section id="cnt3">
       <div class="txt_wrap">
         <h2>MY SKILL</h2>
@@ -234,10 +293,6 @@
             <div class="bg_img">
             <div class="txt">
               <h4>SULWHASOO</h4>
-              <p>설화수 프로젝트입니다. <br>
-                상세한 내용은 추후 업데이트 예정<br>
-                어떤 스킬을 사용, 어떤 컨셉으로 제작<br>
-                했는지 설명 예정</p>
             </div>
               <img src="images/cnt4/yoonjo.png" alt="">
             </div>
@@ -257,14 +312,10 @@
       </div>
       <div class="project2">
         <div class="bg">
-          <a class="clickm" href="sub/project.html">
+          <a class="clickm" href="sub/project.html#project2">
             <div class="bg_img">
               <div class="txt">
                 <h4>NESPRESSO</h4>
-                <p>네스프에소 프로젝트입니다. <br>
-                   상세한 내용은 추후 업데이트 예정<br>
-                   어떤 스킬을 사용, 어떤 컨셉으로 제작<br>
-                   했는지 설명 예정</p>
               </div>
               <img src="images/cnt4/LattissimaOneSilky.png" alt="">
             </div>
