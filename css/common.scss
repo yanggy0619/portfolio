@@ -89,19 +89,23 @@ header, nav, section, footer, figure{display: block;}
 *{box-sizing: border-box;}
 body{font-family: spoqa;color: $gray;}
 
+.clickm{cursor: url(../images/cnt2/mouse1.png), auto;}
+
+html{scroll-behavior: smooth;}
+
+
 #dim{background: rgba(0, 0, 0, .5);position: fixed;top: 0;left: 0;right: 0;bottom: 0;z-index: 99;}
 
 #header{
-    pointer-events: none;
     .util{
       @include flex;
       @include justify-content(space-between);
       position: fixed;width: 100%;padding: 50px 50px 0 50px;z-index: 102;
-      .btn{background: url(../images/cnt1/gnb_btn.png);width: 75px;height: 78px;pointer-events: auto;}
+      .btn{background: url(../images/cnt1/gnb_btn.png);width: 75px;height: 78px;}
     }
     .gnb{position: fixed;}
       .gnb{
-        opacity: 0;width: 100%;height: 100%;z-index: 101;
+        width: 100%;height: 100%;z-index: 101;
         top: 10%;right: -50%;font-family: optima;font-size: 50px;color: $Rbrwn;
         ul{
           li{

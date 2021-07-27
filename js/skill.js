@@ -11,32 +11,32 @@
      let h = now.getHours();
      let m = now.getMinutes();
      let s = now.getSeconds();
-     console.log(now)
-     console.log(yy,mm,dd,day,h,m,s);
+    //  console.log(now)
+    //  console.log(yy,mm,dd,day,h,m,s);
 
      //요일변경
      const week = ['일', '월', '화', '수', '목', '금', '토'];
-     console.log(week[day]);
+    //  console.log(week[day]);
 
      //오전, 오후 -> ampm
      const ampm = h < 12? 'AM': 'PM'; 
-     console.log(ampm);
+    //  console.log(ampm);
 
      //24시간제(0~23) -> 12시간제(0~11)
      h %= 12; // h= h%12
-     console.log(h);
+    //  console.log(h);
      //삼항조건연산자  조건식? 실행문1 : 실행문2;
      h = h? h : 12;
-     console.log(h);
+    //  console.log(h);
 
      // 시, 분, 초 모두 한자리일 경우 2자리로 변경: '0' 결합연산
      if (h < 10) h = '0'+ h; 
      if (m < 10) m = '0'+ m; 
      if (s < 10) s = '0'+ s; 
-     console.log(h, m, s);
+    //  console.log(h, m, s);
 
      const result = `${yy}-${mm}-${dd} ${week[day]}요일<br>${ampm} ${h}:${m}:${s}`;
-     console.log(result); 
+    //  console.log(result); 
      
      //#digital을 찾아서 내부에 result를 출력시키기 (스크립트:innerHTML or 제이쿼리:html매서드에 출력하기)
      //대상.innerHTML = 값;
