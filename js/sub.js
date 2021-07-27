@@ -25,6 +25,19 @@ $(document).ready(function() {
 
 
 
+$('#intro2 .stop').hide();
+$('#intro2 .play').on('click', function () {
+  $(this).hide();
+  $('#intro2 .stop').show();
+});
+$('#intro2 .stop').on('click', function () {
+  $(this).hide();
+  $('#intro2 .play').show();
+});
+
+
+
+
 
 
 

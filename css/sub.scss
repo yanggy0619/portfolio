@@ -5,7 +5,7 @@ body{cursor: none;}
 #cursor1{background:#EBB5BC;z-index: 999999;}
 #cursor2{background: #8EABD4}
 
-/* effect 추가 */
+// effect 추가 
 .fade .fade_up, .fade .fade_down, .fade .fade_right, .fade .fade_left{
     opacity: 0;-webkit-transition: all 1s;-moz-transition: all 1s;-o-transition: all 1s;transition: all 1s;
 }
@@ -18,6 +18,8 @@ body{cursor: none;}
 .fade.on .fade_up, .fade.on .fade_down, .fade.on .fade_right, .fade.on .fade_left{opacity: 1;transform: translate(0, 0);}
 .delay-3{transition-delay: 0.3s !important;}
 
+// sticky
+.sticky{position: sticky;top: 0;}
 
 
 
@@ -51,9 +53,6 @@ h3{color: $Rbrwn;font-family: optima;font-size: 30px;padding: 50px 0;}
     }
     p{padding-top: 10px;}
 }
-.wirframe{
-    img{display: block;margin: 0 auto;}
-}
 
 .design{
     .wrap{
@@ -80,7 +79,7 @@ h3{color: $Rbrwn;font-family: optima;font-size: 30px;padding: 50px 0;}
         width: 100%;
         img{width: 50%;}
         .index_intro{
-            width: 50%;
+            width: 50%;height: 100%;
             .bg{
                 background: url(../images/sulwhasoo/pattern_bg.png);margin-left: 20px;text-align: center;
                 strong{color:$blue;font-size: 50px;display: block;}
@@ -109,10 +108,8 @@ h3{color: $Rbrwn;font-family: optima;font-size: 30px;padding: 50px 0;}
         @include flex;
         width: 100%;
         img{width: 50%;}
+        .sticky{top: 100px;}
         .flag_txt{
-            @include flex;
-            @include justify-content;
-            @include align-items;
            width: 50%;margin-left: 20px;
            p{text-align: center;background: url(../images/sulwhasoo/pattern_bg.png);padding: 30px;} 
         }
@@ -226,11 +223,20 @@ h3{color: $Rbrwn;font-family: optima;font-size: 30px;padding: 50px 0;}
                     img{
                       text-align: center;width: 50%;
                       &:nth-of-type(2){
-                          @include translateY-50;
-                          position: absolute;top: 50%;left: 50%;width: 150px;
+                          position: absolute;top: 100px;left: 350px;width: 150px;animation: circle_text 30s infinite linear;
                         }
+                        @keyframes circle_text {
+                            0% {transform: rotate(0deg);}
+                            100% {transform: rotate(360deg);}
+                          }
                     }
                 }
+                #intro2{
+                    position: relative;
+                    img{position: absolute;top: 80px;left: 340px;}
+                    p{padding-top: 50px;}
+                }
+
                 #intro5{
                     position: relative;
                     img{

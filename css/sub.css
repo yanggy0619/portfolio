@@ -1,4 +1,3 @@
-@charset "UTF-8";
 body {
   cursor: none; }
 
@@ -18,7 +17,6 @@ body {
 #cursor2 {
   background: #8EABD4; }
 
-/* effect 추가 */
 .fade .fade_up, .fade .fade_down, .fade .fade_right, .fade .fade_left {
   opacity: 0;
   -webkit-transition: all 1s;
@@ -41,6 +39,10 @@ body {
 
 .delay-3 {
   transition-delay: 0.3s !important; }
+
+.sticky {
+  position: sticky;
+  top: 0; }
 
 #project1 h3 {
   color: #B08069;
@@ -98,9 +100,6 @@ body {
       right: 20%; }
   #project1 .pro_intro p {
     padding-top: 10px; }
-#project1 .wirframe img {
-  display: block;
-  margin: 0 auto; }
 #project1 .design .wrap {
   display: -webkit-box;
   display: -moz-box;
@@ -138,7 +137,8 @@ body {
   #project1 .index .index_content img {
     width: 50%; }
   #project1 .index .index_content .index_intro {
-    width: 50%; }
+    width: 50%;
+    height: 100%; }
     #project1 .index .index_content .index_intro .bg {
       background: url(../images/sulwhasoo/pattern_bg.png);
       margin-left: 20px;
@@ -171,16 +171,9 @@ body {
     width: 100%; }
     #project1 .Flagship .flag_wrap img {
       width: 50%; }
+    #project1 .Flagship .flag_wrap .sticky {
+      top: 100px; }
     #project1 .Flagship .flag_wrap .flag_txt {
-      display: -webkit-box;
-      display: -moz-box;
-      display: -ms-flexbox;
-      display: -webkit-flex;
-      display: flex;
-      -webkit-justify-content: center;
-      justify-content: center;
-      -webkit-align-items: center;
-      align-items: center;
       width: 50%;
       margin-left: 20px; }
       #project1 .Flagship .flag_wrap .flag_txt p {
@@ -377,13 +370,24 @@ body {
         text-align: center;
         width: 50%; }
         #project2 .index .index_intro .bg #intro1 img:nth-of-type(2) {
-          -webkit-transform: translateY(-50%);
-          -moz-transform: translateY(-50%);
-          transform: translateY(-50%);
           position: absolute;
-          top: 50%;
-          left: 50%;
-          width: 150px; }
+          top: 100px;
+          left: 350px;
+          width: 150px;
+          animation: circle_text 30s infinite linear; }
+@keyframes circle_text {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+    #project2 .index .index_intro .bg #intro2 {
+      position: relative; }
+      #project2 .index .index_intro .bg #intro2 img {
+        position: absolute;
+        top: 80px;
+        left: 340px; }
+      #project2 .index .index_intro .bg #intro2 p {
+        padding-top: 50px; }
     #project2 .index .index_intro .bg #intro5 {
       position: relative; }
       #project2 .index .index_intro .bg #intro5 img {
