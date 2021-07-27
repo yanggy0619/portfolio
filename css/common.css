@@ -181,6 +181,8 @@ html {
   #footer p {
     color: #7D9BA8;
     font-size: 30px;
-    padding-top: 80px; }
+    padding: 60px 0 25px 0; }
+  #footer a:hover img, #footer a:focus img {
+    transform: rotate(10deg); }
 
 /*# sourceMappingURL=common.css.map */

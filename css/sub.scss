@@ -5,6 +5,24 @@ body{cursor: none;}
 #cursor1{background:#EBB5BC;z-index: 999999;}
 #cursor2{background: #8EABD4}
 
+/* effect 추가 */
+.fade .fade_up, .fade .fade_down, .fade .fade_right, .fade .fade_left{
+    opacity: 0;-webkit-transition: all 1s;-moz-transition: all 1s;-o-transition: all 1s;transition: all 1s;
+}
+.fade{
+    .fade_up{transform: translate(0, 100px);}
+    .fade_down{transform: translate(0, -100px);}
+    .fade_right{transform: translate(-100px, 0);}
+    .fade_left{transform: translate(100px, 0);}
+}
+.fade.on .fade_up, .fade.on .fade_down, .fade.on .fade_right, .fade.on .fade_left{opacity: 1;transform: translate(0, 0);}
+.delay-3{transition-delay: 0.3s !important;}
+
+
+
+
+
+
 #project1{
 
 h3{color: $Rbrwn;font-family: optima;font-size: 30px;padding: 50px 0;}

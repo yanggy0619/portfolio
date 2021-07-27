@@ -124,12 +124,14 @@ html{scroll-behavior: smooth;}
       
 }
 
+
 #footer{
-    position: relative;height: 200px;width: 100%;/* background-color: $pink; */
-    text-align: center;
-    h5{
-      @include translateX-50;
-      position: absolute;top: -30px;left: 50%;font-size: 50px;color: $Rbrwn;
-    } 
-    p{color: $blue;font-size: 30px;padding-top: 80px;}
+  position: relative;height: 200px;width: 100%;/* background-color: $pink; */
+  text-align: center;
+  h5{
+    @include translateX-50;
+    position: absolute;top: -30px;left: 50%;font-size: 50px;color: $Rbrwn;
+  } 
+  p{color: $blue;font-size: 30px;padding: 60px 0 25px 0;}
+  a:hover img,a:focus img{transform: rotate(10deg);}
 }

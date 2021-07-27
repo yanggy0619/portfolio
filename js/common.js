@@ -28,6 +28,8 @@ $(document).ready(function() {
             return false;
         });
 
+
+
     // #cnt1
     let currentX = '';
     let currentY = '';
@@ -56,9 +58,11 @@ $(document).ready(function() {
     // #footer 배경색변경
     $(document).scroll(function() {
           const scroll = $(this).scrollTop();
-          console.log(scroll); //콘솔로 좌표값 찍어보기
+          // console.log(scroll); //콘솔로 좌표값 찍어보기
           if (scroll >= 3800) { 
             $('#footer').css({'background-color': ' #f3ddd5', 'transition': 'background-color 1.5s ease'});
           }
       });
+
+
 });

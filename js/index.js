@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    // menu를 클릭하는 경우
+  // menu를 클릭하는 경우
     $('.gnb  ul li a').on('click', function (e) {
         e.preventDefault();
         $('.btn').click();
@@ -7,7 +7,7 @@ $(document).ready(function() {
         $('html, body').stop().animate({scrollTop: $tg.offset().top});
     });
     
-    // #cnt1
+  // #cnt1
     let currentX = '';
     let currentY = '';
     const moveDis = 0.01;
@@ -31,24 +31,6 @@ $(document).ready(function() {
             $(el).css({left: newX + 'px', top: newY + 'px'});
         });
     });
-
-    // #cnt1 사진 움직임
-   /*  $('#cnt2').mousemove(function(e) {
-      const height = $('#cnt2').height() / 80;
-      const pageY = e.pageY / height;
-      const valueY = pageY;
-  
-      $('#cnt2 .move_img').css('transform', 'rotateZ(' + valueY + 'deg)');    
-  });
-  
-  
-  $('#cnt2').mousemove(function(e) {
-      const width = $('#cnt2').width() / 60;
-      const pageX = e.pageX / width;
-      const valueX = pageX;
-  
-    $('#cnt2 .move_img').css('transform', 'rotateY(' + valueX + 'deg)');
-  }); */
   
 
 
@@ -115,21 +97,18 @@ $(document).ready(function() {
           $tgPanel.addClass('on').attr({tabIndex: 0, 'aria-hidden': false}).siblings('.tabpanel').removeClass('on').attr({tabIndex: -1, 'aria-hidden': true});
         });
   
-    //#cnt2 who am i?
-    $('#tab3').on('click', function () {
+  //#cnt2 who am i?
+    const scroll = $(this).scrollTop();
       $(window).scroll(function(){
-      const scroll = $(this).scrollTop();  
-      const move = scroll * 0.1; 
+      const wscroll = $(document).scrollTop(); 
+      const move = wscroll - scroll 
+      console.log(scroll,wscroll);
       $('.move').css({top: move +"px"});
-    });
-    });
-    
+      });
+
+
         
       
-
-
-
-
 
      
 

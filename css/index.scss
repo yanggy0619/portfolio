@@ -83,20 +83,30 @@
   }
   .tabpanel{
       visibility: hidden;overflow: hidden;max-height: 0;
-      &.on{visibility: visible;max-height: 500px;}
+      &.on{visibility: visible;max-height: 1000px}
   }
   #tabpanel1{
     @include flex;
     @include justify-content;
     @include align-items;
-    margin-top: 50px;
-      .introduce{
-       p{
-         line-height: 2;
-         span{font-weight: 700;}
-        }
+    width: 100%;height: 100%;margin-top: 50px;
+    .introduce{
+      padding-right: 50px;
+      span{font-weight: 700;}
+    }
+    .img_wrap{
+      position: relative;perspective: 600px;width: 402px;height: 270px;
+      figure{position: absolute;top: 0;left: 0;backface-visibility: hidden;transition: transform 1s;transform-style: preserve-3d;}
+      .front{transform: rotateX(0deg);}
+      .back{transform: rotateX(-180deg);}
+      &:hover .front, &.flip .front{transform: rotateY(180deg);}
+      &:hover .back, &.flip .back{transform: rotateY(0deg);}
+      figcaption{
+        @include translate-50;
+        position: absolute;top: 50%;left: 50%;font-size: 18px;padding: 5px;
+        text-align: center;color: #fff;backface-visibility: hidden;
       }
-      img{width: 40%;margin-left: 30px;}  
+    }
   }
   #tabpanel2{
       @include flex;
@@ -136,7 +146,7 @@
           .skill_txt{
             div{width: 250px;}
             div:nth-child(1) span{
-              &::after{background-color: $skyblue;width: 95%;}
+              &::after{background-color: $blue;width: 95%;}
             }
             div:nth-child(2) span{
               &::after{background-color: $pink;width: 95%;}
@@ -163,7 +173,7 @@
     #who{
       @include flex;
       @include justify-content(space-around);
-      position: relative;font-size: 40px;width: 100%;margin-top: 50px;
+      position: relative;font-size: 40px;width: 100%;margin-top: 50px;overflow: hidden;
       div:first-child{
         p{color: $Rbrwn;}
         line-height: 1.8;
@@ -171,7 +181,7 @@
       span{position: absolute;top: 0;left: 50%;}
     }
   }
-    
+ 
      
 }
 
