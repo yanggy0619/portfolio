@@ -1,22 +1,3 @@
-body {
-  cursor: none; }
-
-.cursor {
-  position: absolute;
-  height: 20px;
-  width: 20px;
-  border-radius: 50%;
-  transform: translateX(-50%) translateY(-50%);
-  z-index: 99999;
-  pointer-events: none; }
-
-#cursor1 {
-  background: #EBB5BC;
-  z-index: 999999; }
-
-#cursor2 {
-  background: #8EABD4; }
-
 #project1 h3 {
   color: #B08069;
   font-family: optima;
@@ -163,79 +144,6 @@ body {
         background: url(../images/sulwhasoo/pattern_bg.png);
         padding: 30px; }
 
-.Responsive {
-  position: relative;
-  width: 100%;
-  height: 600px; }
-  .Responsive .pc_wrap .pc {
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-justify-content: center;
-    justify-content: center;
-    -webkit-align-items: center;
-    align-items: center;
-    position: relative; }
-    .Responsive .pc_wrap .pc div {
-      position: absolute;
-      top: 17px;
-      left: 512px;
-      width: 418px;
-      height: 212px;
-      overflow: hidden; }
-    .Responsive .pc_wrap .pc:hover .scroll {
-      animation: scroll 13s ease infinite; }
-@keyframes scroll {
-  0% {
-    margin-top: 0; }
-  50% {
-    margin-top: -1090px; }
-  100% {
-    margin-top: 0; } }
-    .Responsive .pc_wrap .pc:hover .scroll_s {
-      animation: scroll_s 10s ease infinite; }
-@keyframes scroll_s {
-  0% {
-    margin-top: 0; }
-  50% {
-    margin-top: -690px; }
-  100% {
-    margin-top: 0; } }
-    .Responsive .pc_wrap .pc:hover p {
-      opacity: 0; }
-    .Responsive .pc_wrap .pc p {
-      position: absolute;
-      top: 0;
-      left: 35%;
-      padding-top: 18px;
-      font-size: 11px;
-      text-align: center;
-      background: rgba(235, 203, 192, 0.9);
-      width: 70px;
-      height: 70px;
-      border-radius: 50%;
-      color: #B08069;
-      opacity: 1;
-      transition: opacity 0.5s; }
-  .Responsive .responsive_wrap img:nth-child(1) {
-    position: absolute;
-    top: 38%;
-    left: 10%; }
-  .Responsive .responsive_wrap img:nth-child(2) {
-    position: absolute;
-    top: 47%;
-    right: 19%; }
-  .Responsive .responsive_wrap img:nth-child(3) {
-    position: absolute;
-    top: 59%;
-    right: 27%; }
-  .Responsive p {
-    position: absolute;
-    bottom: 0;
-    right: 0; }
-
 #project2 h3 {
   color: #7D9BA8;
   font-family: optima;
@@ -292,6 +200,14 @@ body {
       right: 20%; }
   #project2 .pro_intro p {
     padding-top: 10px; }
+#project2 .Responsive {
+  position: relative; }
+  #project2 .Responsive img {
+    width: 100%; }
+  #project2 .Responsive p {
+    position: absolute;
+    bottom: -60px;
+    right: 0; }
 #project2 .design {
   padding-top: 50px; }
   #project2 .design .wrap {

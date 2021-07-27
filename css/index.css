@@ -108,164 +108,32 @@
     transform: translateX(0%); }
   100% {
     transform: translateX(-50%); } }
-  #cnt2 .intro_tab {
-    width: 1000px;
-    margin: 20px auto; }
-  #cnt2 #mainTab .tablist {
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex; }
-    #cnt2 #mainTab .tablist .tab {
-      width: 33.3333333333%;
-      text-align: center;
-      font-size: 20px;
-      color: #fff;
-      background: #7D9BA8;
-      cursor: pointer;
-      border-radius: 5px;
-      margin: 5px; }
-  #cnt2 .tabpanel {
-    visibility: hidden;
-    overflow: hidden;
-    max-height: 0; }
-    #cnt2 .tabpanel.on {
-      visibility: visible;
-      max-height: 500px; }
-  #cnt2 #tabpanel1 {
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-justify-content: center;
-    justify-content: center;
-    -webkit-align-items: center;
-    align-items: center;
-    margin-top: 50px; }
-    #cnt2 #tabpanel1 .introduce p {
-      line-height: 2; }
-      #cnt2 #tabpanel1 .introduce p span {
-        font-weight: 700; }
-    #cnt2 #tabpanel1 img {
-      width: 40%;
-      margin-left: 30px; }
-  #cnt2 #tabpanel2 {
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-flex-wrap: wrap;
-    flex-wrap: wrap;
-    -webkit-align-items: center;
-    align-items: center; }
-    #cnt2 #tabpanel2 .skill_txt {
-      margin-top: 10px;
-      text-align: left; }
-      #cnt2 #tabpanel2 .skill_txt div {
-        position: relative;
-        margin-left: 20px; }
-        #cnt2 #tabpanel2 .skill_txt div::before {
-          content: "";
-          position: absolute;
-          top: 50%;
-          left: -20px;
-          background: #707070;
-          border-radius: 50%;
-          width: 5px;
-          height: 5px; }
-    #cnt2 #tabpanel2 #education, #cnt2 #tabpanel2 #experience, #cnt2 #tabpanel2 #certificate, #cnt2 #tabpanel2 #skill {
-      width: 50%;
-      padding-left: 15%; }
-    #cnt2 #tabpanel2 strong {
-      color: #B08069;
-      font-size: 20px; }
-    #cnt2 #tabpanel2 .about::before {
-      content: "";
-      position: absolute; }
-    #cnt2 #tabpanel2 .about strong {
-      margin-left: 35px; }
-    #cnt2 #tabpanel2 #education::before {
-      background: url(../images/cnt2/education_icon.png);
-      width: 32px;
-      height: 24px; }
-    #cnt2 #tabpanel2 #experience::before {
-      background: url(../images/cnt2/experience_icon.png);
-      width: 32px;
-      height: 28px; }
-    #cnt2 #tabpanel2 #certificate {
-      padding-top: 20px; }
-      #cnt2 #tabpanel2 #certificate::before {
-        background: url(../images/cnt2/certificatel_icon.png);
-        width: 27px;
-        height: 29px; }
-    #cnt2 #tabpanel2 #skill {
-      padding-top: 10px; }
-      #cnt2 #tabpanel2 #skill::before {
-        background: url(../images/cnt2/skill_icon.png);
-        width: 23px;
-        height: 31px; }
-      #cnt2 #tabpanel2 #skill .bar {
-        position: relative;
-        float: right;
-        display: inline-block;
-        margin-top: 9px;
-        border: 1px solid #707070;
-        width: 100px;
-        height: 10px;
-        border-radius: 9px; }
-        #cnt2 #tabpanel2 #skill .bar::after {
-          content: "";
-          position: absolute;
-          top: 0;
-          left: 0;
-          height: 100%;
-          border-radius: 5px 0 0 5px; }
-      #cnt2 #tabpanel2 #skill .skill_txt div {
-        width: 250px; }
-      #cnt2 #tabpanel2 #skill .skill_txt div:nth-child(1) span::after {
-        background-color: #E6F0F5;
-        width: 95%; }
-      #cnt2 #tabpanel2 #skill .skill_txt div:nth-child(2) span::after {
-        background-color: #EBCBC0;
-        width: 95%; }
-      #cnt2 #tabpanel2 #skill .skill_txt div:nth-child(3) span::after {
-        background-color: #F4EDE5;
-        width: 90%; }
-      #cnt2 #tabpanel2 #skill .skill_txt div:nth-child(4) span::after {
-        background-color: #A89C8D;
-        width: 90%; }
-      #cnt2 #tabpanel2 #skill .skill_txt div:nth-child(5) span::after {
-        background-color: #B08069;
-        width: 90%; }
-      #cnt2 #tabpanel2 #skill .skill_txt div:nth-child(6) span::after {
-        background-color: #707070;
-        width: 65%; }
-      #cnt2 #tabpanel2 #skill .skill_txt div:nth-child(7) span::after {
-        background-color: #7D9BA8;
-        width: 70%; }
-  #cnt2 #tabpanel3 #who {
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-justify-content: space-around;
-    justify-content: space-around;
+  #cnt2 .introduce {
     position: relative;
-    font-size: 40px;
-    width: 100%;
-    margin-top: 50px; }
-    #cnt2 #tabpanel3 #who div:first-child {
-      line-height: 1.8; }
-      #cnt2 #tabpanel3 #who div:first-child p {
-        color: #B08069; }
-    #cnt2 #tabpanel3 #who span {
+    margin: 50px 0 0 700px;
+    /* border: 1px solid red; */ }
+    #cnt2 .introduce strong {
+      font-family: optima;
+      font-size: 40px;
+      color: #7D9BA8;
+      font-weight: 400; }
+    #cnt2 .introduce p {
+      color: #707070;
+      font-size: 20px;
+      line-height: 2; }
+      #cnt2 .introduce p span {
+        font-weight: 700; }
+    #cnt2 .introduce::after {
+      content: "";
       position: absolute;
-      top: 0;
-      left: 50%; }
+      top: -100px;
+      left: 40%;
+      background: url(../images/cnt2/cnt2_pic.jpg) no-repeat 50% 50%/cover;
+      width: 400px;
+      height: 500px;
+      opacity: 0; }
+    #cnt2 .introduce:hover::after {
+      opacity: 1; }
 
 #cnt3 {
   height: 160vh; }

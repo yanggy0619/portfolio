@@ -1,10 +1,5 @@
 @charset "utf-8";
 @import  "_var", "_mixin", "_funcion";
-body{cursor: none;}
-.cursor {position: absolute;height: 20px;width: 20px;border-radius: 50%;transform: translateX(-50%) translateY(-50%);z-index: 99999;pointer-events:none;}
-#cursor1{background:#EBB5BC;z-index: 999999;}
-#cursor2{background: #8EABD4}
-
 #project1{
 
 h3{color: $Rbrwn;font-family: optima;font-size: 30px;padding: 50px 0;}
@@ -105,40 +100,6 @@ h3{color: $Rbrwn;font-family: optima;font-size: 30px;padding: 50px 0;}
 
 }
 
-.Responsive{
-    position: relative;width: 100%;height: 600px;
-    .pc_wrap{
-        .pc{
-            @include flex;
-            @include justify-content;
-            @include align-items;
-            position:relative;
-            div{position:absolute;top: 17px;left: 512px;width: 418px;height: 212px;overflow: hidden;}
-            &:hover .scroll{animation: scroll 13s ease infinite;}
-            @keyframes scroll {
-                0%{margin-top: 0;}
-                50%{margin-top: -1090px;}
-                100%{margin-top: 0}
-            }
-            &:hover .scroll_s{animation: scroll_s 10s ease infinite;}
-            @keyframes scroll_s {
-                0%{margin-top: 0;}
-                50%{margin-top: -690px;}
-                100%{margin-top: 0}
-            }
-
-            &:hover p{opacity: 0;}
-            p{position: absolute;top: 0;left: 35%;padding-top: 18px;font-size: 11px;text-align: center;background: rgba(235, 203, 192, .9);width: 70px;height: 70px;border-radius: 50%;color:$Rbrwn;opacity: 1;transition: opacity 0.5s;}
-        }
-    }
-    .responsive_wrap{
-        img:nth-child(1){position: absolute;top: 38%;left: 10%;}
-        img:nth-child(2){position: absolute;top: 47%;right: 19%;}
-        img:nth-child(3){position: absolute;top: 59%;right: 27%;}
-    }
-    p{position: absolute;bottom: 0;right: 0;}
-    
-}
 
 #project2{
 
@@ -168,6 +129,11 @@ h3{color: $Rbrwn;font-family: optima;font-size: 30px;padding: 50px 0;}
         }
         p{padding-top: 10px;}
     }
+    .Responsive{
+        position: relative;
+        img{width: 100%;}
+        p{position: absolute;bottom: -60px;right: 0;}
+    }
     
     .design{
         padding-top: 50px;
@@ -189,7 +155,6 @@ h3{color: $Rbrwn;font-family: optima;font-size: 30px;padding: 50px 0;}
          
         }
     }
-
     .index{
         margin-bottom: 100px;
         .index_content{
@@ -228,4 +193,4 @@ h3{color: $Rbrwn;font-family: optima;font-size: 30px;padding: 50px 0;}
         }
     }
     
-}
+    }
