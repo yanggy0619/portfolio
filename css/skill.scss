@@ -50,14 +50,19 @@
     }
 
     #acdnPanel3{
-        .main_tab{width: 400px;}
-        .main_tab > ul{display: flex;}
-        .main_tab > ul li{width: calc(100% / 3);height: 50px;line-height: 50px;text-align: center;background: $skyblue;cursor: pointer;}
-        .main_tab > ul li + li{border-left: 1px solid #000;}
-        .main_tab > ul li.on{background: beige;}
-        .main_tab .tabpanel{visibility: hidden;max-height: 0;overflow: hidden;height: 150px;text-align: center;font-size: 12px;background: beige;}
-        .main_tab .tabpanel.on{visibility: visible;max-height: 1000px;}
-
+        #cnt2Tab{
+            width: 400px;
+             > ul{
+             display: flex;
+             li{width: calc(100% / 3);height: 50px;line-height: 50px;text-align: center;background: $skyblue;cursor: pointer;}
+             li + li{border-left: 1px solid #000;}
+             li.on{background: beige;}
+            }
+            .tabpanel{
+                visibility: hidden;max-height: 0;overflow: hidden;height: 150px;text-align: center;font-size: 12px;background: beige;
+               &.on{visibility: visible;max-height: 1000px;}
+            }
+        }
     }
 
     #acdnPanel4{

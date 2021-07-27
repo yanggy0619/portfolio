@@ -40,12 +40,12 @@ $(document).ready(function() {
     // #cnt2
         //  1) 첫번째 .tab과 .tabpanel 활성화 (클래스 추가, tabIndex 0) / aria의 state 초기 설정
         // :first-of-type 필터선택자는 같은 부모에서 동일한 타입을 가진 자식중에 첫번째
-        $('.tab:first-of-type, .tabpanel:first-of-type').addClass('on').attr({tabIndex: 0});
-        $('.tab:first-of-type').attr({'aria-selected': false}).siblings().attr({'aria-selected': true});
-        $('.tabpanel:first-of-type').attr({'aria-hidden': false}).siblings('.tabpanel').attr({'aria-hidden': true});
+        $('#cnt2 .tab:first-of-type, #cnt2 .tabpanel:first-of-type').addClass('on').attr({tabIndex: 0});
+        $('#cnt2 .tab:first-of-type').attr({'aria-selected': false}).siblings().attr({'aria-selected': true});
+        $('#cnt2 .tabpanel:first-of-type').attr({'aria-hidden': false}).siblings('.tabpanel').attr({'aria-hidden': true});
       
         // 2) 키보드 제어 - tab(9), 이전방향키(37), 다음방향키(39), home(36), end(35), enter(13)/spacebar(32)
-        $('.tab').on('keydown', function (e) {
+        $('#cnt2 .tab').on('keydown', function (e) {
           const key = e.keyCode;
           console.log(key);
           switch (key) {
@@ -86,7 +86,7 @@ $(document).ready(function() {
         });
       
         // 3) 마우스 제어 - 클릭이벤트
-        $('.tab').on('click', function () {
+        $('#cnt2 .tab').on('click', function () {
           // 탭 : 클릭한탭.tab.on -> tabIndex0 -> aria-selected:true / 클릭하지 않은탭은 반대로 설정하기
           $(this).addClass('on').attr({tabIndex: 0, 'aria-selected': true}).siblings().removeClass('on').attr({tabIndex: -1, 'aria-selected': false});
       
@@ -98,13 +98,13 @@ $(document).ready(function() {
         });
   
   //#cnt2 who am i?
-    const scroll = $(this).scrollTop();
-      $(window).scroll(function(){
-      const wscroll = $(document).scrollTop(); 
-      const move = wscroll - scroll 
-      console.log(scroll,wscroll);
-      $('.move').css({top: move +"px"});
-      });
+    // const scroll = $(this).scrollTop();
+    //   $(window).scroll(function(){
+    //   const wscroll = $(document).scrollTop(); 
+    //   const move = wscroll - scroll 
+    //   console.log(scroll,wscroll);
+    //   $('.move').css({top: move +"px"});
+    //   });
 
 
         
@@ -136,6 +136,15 @@ $(document).ready(function() {
     $acdn.find('.header').mouseenter(function () {
         $(this).addClass('clickm')
     });
+
+    $('.header').on({
+      'mouseenter focusin': function (){
+        $(this).addClass('mouseon');
+      },
+      'mouseleave focusout': function (){
+        $(this).removeClass('mouseon');
+      }
+    })
 
 
     // #cnt4

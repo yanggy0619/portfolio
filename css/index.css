@@ -109,23 +109,37 @@
   100% {
     transform: translateX(-50%); } }
   #cnt2 .intro_tab {
-    width: 1000px;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    align-items: center;
     margin: 20px auto; }
   #cnt2 #mainTab .tablist {
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
     display: -webkit-flex;
-    display: flex; }
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center; }
     #cnt2 #mainTab .tablist .tab {
-      width: 33.3333333333%;
+      width: 200px;
+      padding: 5px;
+      margin: 0 15px 0 15px;
       text-align: center;
       font-size: 20px;
-      color: #fff;
-      background: #7D9BA8;
+      color: #7D9BA8;
+      border: 1px solid #7D9BA8;
       cursor: pointer;
-      border-radius: 5px;
-      margin: 5px; }
+      border-radius: 5px; }
+      #cnt2 #mainTab .tablist .tab.on {
+        background: #7D9BA8;
+        color: #fff; }
   #cnt2 .tabpanel {
     visibility: hidden;
     overflow: hidden;
@@ -143,9 +157,10 @@
     justify-content: center;
     -webkit-align-items: center;
     align-items: center;
-    width: 100%;
+    width: 1000px;
     height: 100%;
-    margin-top: 50px; }
+    margin-top: 50px;
+    line-height: 2; }
     #cnt2 #tabpanel1 .introduce {
       padding-right: 50px; }
       #cnt2 #tabpanel1 .introduce span {
@@ -288,8 +303,9 @@
     position: relative;
     font-size: 40px;
     width: 100%;
-    margin-top: 50px;
-    overflow: hidden; }
+    margin-top: 40px;
+    overflow: hidden;
+    text-align: center; }
     #cnt2 #tabpanel3 #who div:first-child {
       line-height: 1.8; }
       #cnt2 #tabpanel3 #who div:first-child p {

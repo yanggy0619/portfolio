@@ -55,6 +55,22 @@ $(document).ready(function() {
         });
     });
 
+    //fade effect
+  // 1) scroll 이벤트 선언
+  $(window).on('scroll', function () {
+    // 2) 스크롤바의 수직이동거리를 변수에 저장(스크롤을 빨리 움직이는 사용자를 위해 값을 더해주기)
+    const scrollY = $(this).scrollTop() + $(this).height();
+    // ★위치, 크기, 스크롤이동거리 메서드 기억하기
+
+    // 3) 스크롤바의 수직이동거리와 나(보여질 컨텐츠)의 위치가 가까워질 경우만 .fade.on클래스명 추가
+    $('.fade').each(function () {
+        if(scrollY > $(this).offset().top) $(this).addClass('on');
+        // 하단에서 상단으로 다시 올렸을때 효과가 반복되길 바란다면 추가 
+        else $(this).removeClass('on');
+    });
+
+});
+
     // #footer 배경색변경
     $(document).scroll(function() {
           const scroll = $(this).scrollTop();

@@ -63,28 +63,10 @@
 
   $(document).ready(function () {
     // skill3
-    /* 
-     1) 첫번째 .tab과 .tabpanel 활성화 (클래스 추가, tabIndex 0)
-     aria의 state 초기 설정
-     2) 키보드 제어 - tab, 이전방향키, 다음방향키, home, end, enter/spacebar
-     3) 마우스 제어 - 클릭이벤트
-     4) 탭활성화 함수 생성
- 
-     변수 = 초기값;
-     switch (변수) {
-       case 값1:
-         값1을 만족하는 경우 실행할 실행문1;
-         break;
-       case 값2:
-         값2을 만족하는 경우 실행할 실행문2;
-         break;
-       defult:
-         case 만족하지 못하는 모든것이 실행할 실행문;
-     }
-   */
    // 1) 초기값설정
-     $('.tab:first-of-type').addClass('on').attr({'tabIndex': 0, 'aria-selected':true}).siblings().attr({'aria-selected':false});
-     $('.tabpanel:first-of-type').addClass('on').attr({'tabIndex': 0, 'aria-hidden':false}).siblings().attr({'aria-hidden':true});
+   $('#cnt2Tab .tab:first-of-type, #cnt2Tab .tabpanel:first-of-type').addClass('on').attr({tabIndex: 0});
+   $('#cnt2Tab .tab:first-of-type').attr({'aria-selected': true}).siblings().attr({'aria-selected': false});
+   $('#cnt2Tab .tabpanel:first-of-type').attr({'aria-hidden': false}).siblings('.tabpanel').attr({'aria-hidden': true});
  
  
      // 2) 키보드 제어
@@ -132,19 +114,16 @@
      });
  
      // 3) 마우스 제어 - 클릭이벤트
-     $('.tab').on('click', function () {
-       const $tgTab = $(this);
-       tabActive($tgTab)
-     });
-     function tabActive ($tgTab) {
+     $('#cnt2Tab .tab').on('click', function () {
+      // 탭 : 클릭한탭.tab.on -> tabIndex0 -> aria-selected:true / 클릭하지 않은탭은 반대로 설정하기
+      $(this).addClass('on').attr({tabIndex: 0, 'aria-selected': true}).siblings('.tab').removeClass('on').attr({tabIndex: -1, 'aria-selected': false});
   
-       //탭
-       $tgTab.addClass('on').attr({'tabIndex': 0,'aria-selected': true}).siblings().removeClass('on').attr({'tabIndex': -1, 'aria-selected': false});
- 
-       //탭패널
-       const $targetpanel = $('#' + $tgTab.attr('aria-controls'));
-       $targetpanel.addClass('on').attr({'aria-hidden': false, 'tabIndex': 0}).siblings().removeClass('on').attr({'aria-hidden': true, 'tabIndex': -1});
-     }
+      // 탭패널 : 선택된 탭패널 .tabpanel.on -> tabIndex0 -> aria-hidden:false / 선택되지 않은 탭패널은 반대로 설정
+      // 선택된 탭패널 변수 생성
+      const $tgPanel = $('#' + $(this).attr('aria-controls'));
+      console.log($tgPanel, typeof $tgPanel);
+      $tgPanel.addClass('on').attr({tabIndex: 0, 'aria-hidden': false}).siblings('.tabpanel').removeClass('on').attr({tabIndex: -1, 'aria-hidden': true});
+    });
 
 
      // skill4
@@ -185,21 +164,10 @@
       function ariaHidden() {
         // 1) 모든 li를 aria-hidden: true 속성 설정
         $visualCnt.children().attr('aria-hidden', true);
-        // 2) 앞에서 부터 3개만 aria-hidden: false로 바꾸기 .slice(시작인덱스, 종료인덱스) 종료인덱스 자신은 포함하지 않음
+        // 2) 1개만 aria-hidden: false로 바꾸기 .slice(시작인덱스, 종료인덱스) 종료인덱스 자신은 포함하지 않음
         $visualCnt.children().slice(0,1).attr('aria-hidden', false);
       }
       ariaHidden();
-
-
-      // skill5
-      // $('.card').on({
-      //   focusin: function () {
-      //     $(this).addClass('flip');
-      // },
-      //   focusout: function () {
-      //     $(this).removeClass('flip');
-      //   }
-      // });
 
  
  
