@@ -130,6 +130,12 @@ html {
 .delay-9 {
   transition-delay: 0.9s !important; }
 
+.delay-12 {
+  transition-delay: 1.2s !important; }
+
+.delay-15 {
+  transition-delay: 1.5s !important; }
+
 #dim {
   background: rgba(0, 0, 0, 0.5);
   position: fixed;
