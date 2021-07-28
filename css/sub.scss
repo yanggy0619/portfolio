@@ -23,7 +23,8 @@ body{cursor: none;}
 // sticky
 .sticky{position: sticky;top: 0;}
 
-
+// strong
+strong{padding: 50px;text-decoration: underline;font-size: 40px;}
 
 
 
@@ -84,7 +85,7 @@ h3{color: $Rbrwn;font-family: optima;font-size: 30px;padding: 50px 0;}
             width: 50%;height: 100%;
             .bg{
                 background: url(../images/sulwhasoo/pattern_bg.png);margin-left: 20px;text-align: center;
-                strong{color:$blue;font-size: 50px;display: block;}
+                strong{color:$blue;display: block;}
                 #intro1, #intro2, #intro3, #intro4{margin-bottom: 40px;}
                 p{padding-top: 20px;}
                 #intro1{
@@ -217,7 +218,7 @@ h3{color: $Rbrwn;font-family: optima;font-size: 30px;padding: 50px 0;}
         .index_intro{
             .bg{
                 background: #f5f3f0;margin-left: 20px;text-align: center;
-                strong{color:$Rbrwn;font-size: 50px;display: block;margin-bottom: 10px;}
+                strong{color:$Rbrwn;display: block;margin-bottom: 10px;}
                 #intro1, #intro2, #intro3, #intro4, #intro5, #intro6{margin-bottom: 40px;}
                 p{padding-top: 20px;}
                 #intro1{
@@ -225,7 +226,7 @@ h3{color: $Rbrwn;font-family: optima;font-size: 30px;padding: 50px 0;}
                     img{
                       text-align: center;width: 50%;
                       &:nth-of-type(2){
-                          position: absolute;top: 100px;left: 350px;width: 150px;animation: circle_text 30s infinite linear;
+                          position: absolute;top: 190px;left: 350px;width: 150px;animation: circle_text 30s infinite linear;
                         }
                         @keyframes circle_text {
                             0% {transform: rotate(0deg);}
@@ -235,7 +236,7 @@ h3{color: $Rbrwn;font-family: optima;font-size: 30px;padding: 50px 0;}
                 }
                 #intro2{
                     position: relative;
-                    img{position: absolute;top: 80px;left: 340px;}
+                    img{position: absolute;top: 150px;left: 340px;}
                     p{padding-top: 50px;}
                 }
 

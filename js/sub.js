@@ -7,6 +7,7 @@ $(document).ready(function() {
     }, 100);
   })
 
+
   //fade effect
   // 1) scroll 이벤트 선언
   $(window).on('scroll', function () {
@@ -24,6 +25,11 @@ $(document).ready(function() {
 });
 
 
+// clickm
+$('#project1 a, #project2 a').mouseenter(function (){
+  $(this).addClass('clickm');
+});
+
 
 $('#intro2 .stop').hide();
 $('#intro2 .play').on('click', function () {
@@ -34,6 +40,8 @@ $('#intro2 .stop').on('click', function () {
   $(this).hide();
   $('#intro2 .play').show();
 });
+
+
 
 
 

@@ -70,7 +70,7 @@
  
  
      // 2) 키보드 제어
-     $('.tab').on('keydown', function (e) {
+     $('.main_tab').on('keydown', function (e) {
        const key = e.keyCode;
        console.log(key);
  
@@ -105,7 +105,7 @@
          case 32:
            e.preventDefault();
            // a,button은 엔터나 스페이스바를 누르면 자동으로 클릭이 가능하지만 li는 불가능 하기때문에 강제로 클릭 이벤트를 넣어주어야 함. 
-           // => $(this).click();
+          // $(this).click();
  
            const $tgTab = $(this);
            tabActive($tgTab)

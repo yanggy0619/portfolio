@@ -50,6 +50,11 @@ body {
   position: sticky;
   top: 0; }
 
+strong {
+  padding: 50px;
+  text-decoration: underline;
+  font-size: 40px; }
+
 #project1 h3 {
   color: #B08069;
   font-family: optima;
@@ -151,7 +156,6 @@ body {
       text-align: center; }
       #project1 .index .index_content .index_intro .bg strong {
         color: #7D9BA8;
-        font-size: 50px;
         display: block; }
       #project1 .index .index_content .index_intro .bg #intro1, #project1 .index .index_content .index_intro .bg #intro2, #project1 .index .index_content .index_intro .bg #intro3, #project1 .index .index_content .index_intro .bg #intro4 {
         margin-bottom: 40px; }
@@ -362,7 +366,6 @@ body {
     text-align: center; }
     #project2 .index .index_intro .bg strong {
       color: #B08069;
-      font-size: 50px;
       display: block;
       margin-bottom: 10px; }
     #project2 .index .index_intro .bg #intro1, #project2 .index .index_intro .bg #intro2, #project2 .index .index_intro .bg #intro3, #project2 .index .index_intro .bg #intro4, #project2 .index .index_intro .bg #intro5, #project2 .index .index_intro .bg #intro6 {
@@ -377,7 +380,7 @@ body {
         width: 50%; }
         #project2 .index .index_intro .bg #intro1 img:nth-of-type(2) {
           position: absolute;
-          top: 100px;
+          top: 190px;
           left: 350px;
           width: 150px;
           animation: circle_text 30s infinite linear; }
@@ -390,7 +393,7 @@ body {
       position: relative; }
       #project2 .index .index_intro .bg #intro2 img {
         position: absolute;
-        top: 80px;
+        top: 150px;
         left: 340px; }
       #project2 .index .index_intro .bg #intro2 p {
         padding-top: 50px; }
