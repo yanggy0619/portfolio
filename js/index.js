@@ -115,7 +115,7 @@ $(document).ready(function() {
     // #cnt3
     const $acdn = $('#cnt3 .accordion')
     // 1) header의 초기설정 아코디언 패널이 열려있는지 열려있지 않는지
-    $acdn.find('.title:nth-of-type(4) .header').addClass('on').attr({'aria-expanded': true, 'aria-disabled': true}).parent().siblings('.title').children().attr({'aria-expanded': false});
+    $acdn.find('.title:nth-of-type(4) .header').addClass('on').attr({'aria-expanded': true, 'aria-disabled': false}).parent().siblings('.title').children().attr({'aria-expanded': false});
 
     $acdn.find('.panel:nth-of-type(4)').addClass('on').attr({tabIndex : 0});
     // 2) 키보드제어 - 상단방향키(38), 하단방향키(40), home(36), end(35), enter/spacebar(click 이벤트가 대신함)

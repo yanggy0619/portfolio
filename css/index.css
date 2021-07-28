@@ -353,7 +353,9 @@
       #cnt3 .accordion .header span {
         font-size: 40px;
         border: 2px solid #F4EDE5;
-        padding: 0 27px; }
+        padding: 0 27px;
+        display: inline-block;
+        margin: 40px 0 40px 50px; }
       #cnt3 .accordion .header div:first-child {
         margin: 39px 0 37px 50px; }
       #cnt3 .accordion .header .bdline {
