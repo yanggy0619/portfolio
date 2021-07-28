@@ -108,8 +108,8 @@
       figure{position: absolute;top: 0;left: 0;backface-visibility: hidden;transition: transform 1s;transform-style: preserve-3d;}
       .front{transform: rotateX(0deg);}
       .back{transform: rotateX(-180deg);}
-      &:hover .front, &.flip .front{transform: rotateY(180deg);}
-      &:hover .back, &.flip .back{transform: rotateY(0deg);}
+      &:hover .front, &.flip .front{transform: rotateX(180deg);}
+      &:hover .back, &.flip .back{transform: rotateX(0deg);}
       figcaption{
         @include translate-50;
         position: absolute;top: 50%;left: 50%;font-size: 18px;padding: 5px;

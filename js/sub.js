@@ -7,7 +7,7 @@ $(document).ready(function() {
     }, 100);
   })
 
-
+$('#tab3').on('click', function () {
   //fade effect
   // 1) scroll 이벤트 선언
   $(window).on('scroll', function () {
@@ -23,6 +23,9 @@ $(document).ready(function() {
     });
 
 });
+
+});
+  
 
 
 // clickm

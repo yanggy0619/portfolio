@@ -182,9 +182,9 @@
       #cnt2 #tabpanel1 .img_wrap .back {
         transform: rotateX(-180deg); }
       #cnt2 #tabpanel1 .img_wrap:hover .front, #cnt2 #tabpanel1 .img_wrap.flip .front {
-        transform: rotateY(180deg); }
+        transform: rotateX(180deg); }
       #cnt2 #tabpanel1 .img_wrap:hover .back, #cnt2 #tabpanel1 .img_wrap.flip .back {
-        transform: rotateY(0deg); }
+        transform: rotateX(0deg); }
       #cnt2 #tabpanel1 .img_wrap figcaption {
         -webkit-transform: translate(-50%, -50%);
         -moz-transform: translate(-50%, -50%);
