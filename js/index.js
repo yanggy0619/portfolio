@@ -11,7 +11,7 @@ $(document).ready(function() {
     let currentX = '';
     let currentY = '';
     const moveDis = 0.01;
-    $('#cnt1').mousemove(function(e){
+    $('#cnt1').on('mousemove', function(e){
         if (currentX == '') currentX = e.pageX;
         const xdiff = e.pageX - currentX;
         currentX = e.pageX;
@@ -97,14 +97,18 @@ $(document).ready(function() {
           $tgPanel.addClass('on').attr({tabIndex: 0, 'aria-hidden': false}).siblings('.tabpanel').removeClass('on').attr({tabIndex: -1, 'aria-hidden': true});
         });
   
-  //#cnt2 who am i?
-    // const scroll = $(this).scrollTop();
-    //   $(window).scroll(function(){
-    //   const wscroll = $(document).scrollTop(); 
-    //   const move = wscroll - scroll 
-    //   console.log(scroll,wscroll);
-    //   $('.move').css({top: move +"px"});
-    //   });
+  // #cnt2 who am i?
+    const scroll = $(this).scrollTop();
+      $(window).scroll(function(){
+        const contentHei = $('.move').height();
+        const scrollPo = $(window).scrollTop();
+        console.log(scrollPo, contentHei);
+        if (scrollPo > contentHei) {
+          $('.move').stop();
+        }else{
+          $('.move').stop().animate({'top': scrollPo +'px'});
+        }
+      });
 
 
         
@@ -148,10 +152,15 @@ $(document).ready(function() {
 
 
     // #cnt4
-    $('#cnt4 .next').click('on', function () {
-        $(this).parents('.project1').css({visibility: 'hidden', overflow: 'hidden', maxHeight: 0}).next().css({visibility: 'visible', maxHeight: 5000})
+    $('.project2').hide();
+ $('#cnt4 .next').click('on', function () {
+        $(this).parents('.project1').fadeOut().siblings('.project2').fadeIn();
     });
+
     $('#cnt4 .prev').click('on', function () {
-        $(this).parents('.project2').css({visibility: 'hidden', overflow: 'hidden', maxHeight: 0}).prev().css({visibility: 'visible', maxHeight: 5000})
-    });
+      $(this).parents('.project2').fadeOut().siblings('.project1').fadeIn();
+  });
+    // $('#cnt4 .prev').click('on', function () {
+    //     $(this).parents('.project2').css({visibility: 'hidden', overflow: 'hidden', maxHeight: 0}).prev().css({visibility: 'visible', maxHeight: 5000})
+    // });
 });
