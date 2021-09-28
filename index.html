@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="css/index.css">
   <link rel="stylesheet" href="css/skill.css">
   <script src="js/jquery-1.12.4.min.js"></script>
-  <script src="js/common.js"></script>
+  <script src="js/gsap.min.js"></script>
   <script src="js/index.js"></script>
   <script src="js/skill.js"></script>
   
@@ -21,35 +21,67 @@
 <body>
   <div id="wrap">
     <header id="header">
-      <div class="util">
-        <h1 class="logo"><a href="index.html"><img src="images/cnt1/logo.png" alt="홈버튼"></a></h1>
-        <a class="btn last" href=""></a>
-      </div>
-
+      <h1 class="logo"><a href="index.html"><div><img src="images/cnt1/logo.svg" alt=""></a></h1>
       <nav class="gnb">
         <h2 class="blind">주메뉴</h2>
-        <ul>
-          <li><a href="#cnt2" class="first">1<span>ABOUT ME</span></a></li>
-          <li><a href="#cnt3">2<span>SKILL</span></a></li>
-          <li><a href="#cnt4">3<span>PROJECT</span></a></li>
-          <li><a href="#footer">4<span>CONTACT</span></a></li>
+        <ul class="on">
+          <li><a href="#cnt2-1">ABOUT ME</a></li>
+          <li><a href="#cnt3">SKILL</a></li>
+          <li><a href="#cnt4">PROJECT</a></li>
+          <li><a href="#footer">CONTACT</a></li>
         </ul>
       </nav>
-      <div class="gnb_bg"></div>
     </header>
     <section id="cnt1">
-      <h2 class="blind">About me</h2>
-      <div class="bg_img"></div>
-      <div class="txt">Hello</div>
-      <div class="txt">Nice to <br> meet you</div>
-      <div class="deco1 mouseM"></div>
-      <div class="deco2 mouseM"></div>
-      <div class="deco3 mouseM"></div>
-      <div class="deco4 mouseM"></div>
+      <h2 class="blind">양가영 포트폴리오</h2>
+      <div class="bg_img">
+        <img src="images/cnt1/BUDAPEST.jpg" alt="">
+      </div>
+      <div class="txt">
+        <div class="txt_wrap">
+          <p>HELLO</p>
+          <p>NICE TO MEET YOU</p>
+        </div>
+        <p class="txt_bottom">WELCOME TO MY PORTFOLIO</p>
+      </div>
+
     </section>
+
+    <section id="cnt2-1">
+      <div class="cnt2-1_wrap">
+        <div class="img_wrap">
+          <div class="img_left">
+            <img src="images/cnt1/21456044570A648F0F.jfif" alt="">
+          </div>
+          <div class="deco_wrap">
+            <div class="deco1 mouseM"></div>
+            <div class="deco2 mouseM"></div>
+            <div class="deco3 mouseM"></div>
+            <div class="deco4 mouseM"></div>
+          </div>
+        </div>
+
+
+        <div class="txt_right">
+          <div class="txt_wrap">
+            <h2>ABOUT ME</h2>
+            <strong>안녕하세요, 웹퍼블리셔 양가영입니다.</strong>
+            <p>
+              웹퍼블리셔에게 매우 중요한 역량은 '소통'이라고 생각합니다.
+              웹퍼블리셔는, 기획자의 기획의도를 파악하고 디자이너의 디자인을 웹에 옮기며 사이트에 필요한 기능과 데이터를 추가하기 위해 개발적인 지식도 필요합니다.
+              각 부서간에 협업을 위해 꾸준히 저 자신을 발전할 것입니다.</p>
+            <p>
+              또한, 저는 웹사이트에서 웹사이트목적과 사용자에게 편의성이 가장 중요하다고 생각합니다.
+              항상 기획서와 디자인을 보고 문서의 구성요소들이 어떤의미를 가지고 어떻게 쓰이는지를 해석하고 판단하여 그에 맞도록 문서를 구조화할 것입니다.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section id="cnt2">
       <div id="cnt2_bg">
-        <div class="txt_wrap">
+        <div class="txt_box">
           <h2>ABOUT ME</h2>
           <p>저에 대해 소개해드립니다.</p>
         </div>
@@ -123,10 +155,10 @@
             </div>
             <div role="tabpanel" aria-labelledby="tab3" id="tabpanel3" class="tabpanel">
             <div id="who">
-              <div class="fade">
-                <p class="fade_up delay-6">성장하는</p>
-                <p class="fade_up delay-12">소통을 잘하는</p>
-                <p class="fade_up delay-15">웹표준을 준수하는</p>
+              <div>
+                <p>성장하는</p>
+                <p>소통을 잘하는</p6>
+                <p>웹표준을 준수하는</p>
               </div>
               <div>
                 <span class="move">웹퍼블리셔가 되겠습니다.</span>
@@ -139,7 +171,7 @@
     </section>
 
     <section id="cnt3">
-      <div class="txt_wrap">
+      <div class="txt_box">
         <h2>MY SKILL</h2>
         <p>저는 이런것들을 할줄 압니다.</p>
       </div>
@@ -290,65 +322,74 @@
         </div>
       </div>
     </section>
+   
     <section id="cnt4">
-      <div class="txt_wrap">
+      <div class="txt_box">
         <h2>PROJECT</h2>
         <p>저의 프로젝트를 소개해드립니다.</p>
       </div>
-      <div class="project1">
-        <div class="bg">
-          <a class="clickm" href="sub/project.html">
-            <div class="bg_img">
-              <div class="txt">
-               <h4>SULWHASOO</h4>
+      <div class="project_wrap">
+        <div class="sticky">
+          <div class="hor_long">
+            <div class="project">
+              <div class="sulwhasoo">
+                <div class="bg"></div>
+                <div class="txt_wrap">
+                  <strong>sulwhasoo project</strong>
+                  <p>design, publishing / 2021</p>
+                  <a href="sub/project.html">VIEW MORE</a>
+                </div>
               </div>
-              <img src="images/cnt4/yoonjo.png" alt="" class="product">
-            </div>
-          </a>
-          <div class="next">
-            <button type="button">
-              <img src="images/cnt4/button.png" alt="">
-            </button>
-            <div class="next_text">
-              <span>N</span>
-              <span>E</span>
-              <span>X</span>
-              <span>T</span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="project2">
-        <div class="bg">
-          <a class="clickm" href="sub/project.html#project2">
-            <div class="bg_img">
-              <div class="txt">
-                <h4>NESPRESSO</h4>
+              <div class="nespresso">
+                <div class="bg"></div>
+                <div class="txt_wrap">
+                  <strong>nespresso project</strong>
+                  <p>design, publishing / 2021</p>
+                  <a href="sub/project.html#project2">VIEW MORE</a>
+                </div>
               </div>
-              <img src="images/cnt4/LattissimaOneSilky.png" alt="" class="product">
-            </div>
-          </a>
-          <div class="prev">
-            <button type="button">
-              <img src="images/cnt4/button_prev.png" alt="">
-            </button>
-            <div class="prev_text">
-              <span>P</span>
-              <span>R</span>
-              <span>E</span>
-              <span>V</span>
+              <div class="portfolio">
+                <div class="bg"></div>
+                <div class="txt_wrap">
+                  <strong>My portfolio</strong>
+                  <p>design, publishing / 2021</p>
+                  <a href="index.html">VIEW MORE</a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
+   
     <footer id="footer">
       <div class="contact">
-        <h5>CONTACT</h5>
-        <p>LET'S WORK TOGETHER</p>
-        <a href="mailto:did-619@naver.com" title="mailme" class="mailme"><img src="images/cnt5/mail.png" alt=""></a>
+        
+        <div class="contact_left">
+          <div class="logo"></div>
+          <p>Web publisher</p>
+          <p>&copy;GaYoung Yang</p>
+        </div>
+
+        <div class="contact_center">
+          <ul>
+            <li><a href="#cnt2-1">ABOUT ME</a></li>
+            <li><a href="#cnt3">SKILL</a></li>
+            <li><a href="#cnt4">PROJECT</a></li>
+            <li><a href="#footer">CONTACT</a></li>
+          </ul>
+        </div>
+
+        <div class="contact_right">
+          <div class="top">
+            <a>Back to top</a>
+          </div>
+          <h3>CONTACT ME :</h3>
+          <a href="mailto:did-619@naver.com" title="mailme" class="mailme">did-619@naver.com</a>
+          
+        </div>
+        
       </div>
-      <div class="scrollTop"></div>
     </footer>
   </div>
 </body>

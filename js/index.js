@@ -1,24 +1,16 @@
 $(document).ready(function() {
-  // menu를 클릭하는 경우
-    $('.gnb  ul li a').on('click', function (e) {
-        e.preventDefault();
-        $('.btn').click();
-        const $tg = $($(this).attr('href'));
-        $('html, body').stop().animate({scrollTop: $tg.offset().top});
-    });
-    
-  // #cnt1
+    //#cnt2-1 장식요소들
     let currentX = '';
     let currentY = '';
     const moveDis = 0.01;
-    $('#cnt1').on('mousemove', function(e){
+    $('#cnt2-1').on('mousemove', function(e){
         if (currentX == '') currentX = e.pageX;
         const xdiff = e.pageX - currentX;
         currentX = e.pageX;
         if (currentY == '') currentY = e.pageY;
         const ydiff = e.pageY - currentY;
         currentY = e.pageY;
-        $('#cnt1 .mouseM').each(function(i, el) {
+        $('#cnt2-1 .mouseM').each(function(i, el) {
             let movementx = (i + 1) * (xdiff * moveDis);
             let movementy = (i + 1) * (ydiff * moveDis);
 
@@ -31,6 +23,55 @@ $(document).ready(function() {
             $(el).css({left: newX + 'px', top: newY + 'px'});
         });
     });
+
+    $(window).scroll(function () {
+      
+      //#cnt1 제어
+      const scrollTop = $(this).scrollTop();
+        // #cnt1 창열리기 sticky로 제어
+        if (scrollTop > $('#cnt1').offset().top) {
+            $('.bg_img').addClass('active');
+            $('.txt').addClass('active');
+        } 
+        else if(scrollTop < $('#cnt1').offset().top + 1000) {
+            $('.bg_img').removeClass('active');
+            $('.txt').removeClass('active');
+        }
+
+
+      //#cnt4
+      const $project_wrap = $('.project_wrap');
+      const projectwrapY = $project_wrap.offset().top;  //.project_wrap 상단 브라우저에서 떨어진 거리
+      const projectwrapHei = $project_wrap.outerHeight(); //.project_wrap 세로 높이(border 포함)
+      // console.log(projectwrapY, projectwrapHei);  //2100, 3666
+      const scrollY = $(this).scrollTop();    //스크롤바 이동거리
+      const leftMove = scrollY - projectwrapY; // absolute를 가지는 .hor_long의 left좌표
+      console.log(scrollY);
+
+      if (scrollY < projectwrapY - $(window).height()/10) {  //.cnt_top이 보여지는 동안: left 0고정, 스크롤을 빨리 움직이는 사용자 때문에 조금만 빨리 animate()
+        /* gsap.to('#box', {rotation: 27, x: 100, duration: 1});
+        첫 번째 파라미터는 트윈 할 대상(Target)
+        두 번째 속성(Properties) */
+        gsap.to('.hor_long', {left: 0, duration: 0.5, ease: Power3.easeOut});
+      } else if (scrollY < projectwrapY + projectwrapHei - $(window).height()) { //.cnt_btm이 보이지 전 : left=> 스크롤바의 이동거리-.sticky_wrap의수직위치
+        gsap.to('.hor_long', {left: -leftMove, duration: 0.5, ease: Power3.easeOut});
+      }  
+
+
+      //gnb
+     if (scrollY >= $('#cnt2-1').offset().top) $('.gnb li:first-child').addClass('on')
+     else if (scrollY < $('#cnt2-1').offset().top) $('.gnb li:first-child').removeClass('on');
+
+     if (scrollY >= $('#cnt3').offset().top) $('.gnb li:nth-child(2)').addClass('on')
+     else if (scrollY < $('#cnt3').offset().top) $('.gnb li:nth-child(2)').removeClass('on');
+
+     if (scrollY >= $('#cnt4').offset().top) $('.gnb li:nth-child(3)').addClass('on')
+     else if (scrollY < $('#cnt4').offset().top) $('.gnb li:nth-child(3)').removeClass('on');
+
+     if ($(window).scrollTop() == $(document).height() - $(window).height()) $('.gnb li:nth-child(4)').addClass('on')
+     else $('.gnb li:nth-child(4)').removeClass('on');
+
+    });
   
 
 
@@ -38,20 +79,20 @@ $(document).ready(function() {
 
 
     // #cnt2
-        //  1) 첫번째 .tab과 .tabpanel 활성화 (클래스 추가, tabIndex 0) / aria의 state 초기 설정
-        // :first-of-type 필터선택자는 같은 부모에서 동일한 타입을 가진 자식중에 첫번째
-        $('#cnt2 .tab:first-of-type, #cnt2 .tabpanel:first-of-type').addClass('on').attr({tabIndex: 0});
-        $('#cnt2 .tab:first-of-type').attr({'aria-selected': false}).siblings().attr({'aria-selected': true});
-        $('#cnt2 .tabpanel:first-of-type').attr({'aria-hidden': false}).siblings('.tabpanel').attr({'aria-hidden': true});
+    //  1) 첫번째 .tab과 .tabpanel 활성화 (클래스 추가, tabIndex 0) / aria의 state 초기 설정
+    // :first-of-type 필터선택자는 같은 부모에서 동일한 타입을 가진 자식중에 첫번째
+    $('#cnt2 .tab:first-of-type, #cnt2 .tabpanel:first-of-type').addClass('on').attr({tabIndex: 0});
+    $('#cnt2 .tab:first-of-type').attr({'aria-selected': false}).siblings().attr({'aria-selected': true});
+    $('#cnt2 .tabpanel:first-of-type').attr({'aria-hidden': false}).siblings('.tabpanel').attr({'aria-hidden': true});
       
-        // 2) 키보드 제어 - tab(9), 이전방향키(37), 다음방향키(39), home(36), end(35), enter(13)/spacebar(32)
-        $('#cnt2 .tab').on('keydown', function (e) {
-          const key = e.keyCode;
-          console.log(key);
-          switch (key) {
-            case 37:  //이전 방향키
-              // 나자신의 포커스 제거
-              $(this).attr({tabIndex: -1});
+    // 2) 키보드 제어 - tab(9), 이전방향키(37), 다음방향키(39), home(36), end(35), enter(13)/spacebar(32)
+    $('#cnt2 .tab').on('keydown', function (e) {
+      const key = e.keyCode;
+      console.log(key);
+      switch (key) {
+          case 37:  //이전 방향키
+          // 나자신의 포커스 제거
+          $(this).attr({tabIndex: -1});
               // if (만약 내가 .first라는 클래스명을 가졌다면) .last로 포커스 보내기
               // else 이전 li를 찾아서 포커스 보내기
               if ($(this).is('.first')) {
@@ -97,24 +138,7 @@ $(document).ready(function() {
           $tgPanel.addClass('on').attr({tabIndex: 0, 'aria-hidden': false}).siblings('.tabpanel').removeClass('on').attr({tabIndex: -1, 'aria-hidden': true});
         });
   
-  // #cnt2 who am i?
-    const scroll = $(this).scrollTop();
-      $(window).scroll(function(){
-        const contentHei = $('.move').height();
-        const scrollPo = $(window).scrollTop();
-        console.log(scrollPo, contentHei);
-        if (scrollPo > contentHei) {
-          $('.move').stop();
-        }else{
-          $('.move').stop().animate({'top': scrollPo +'px'});
-        }
-      });
 
-
-        
-      
-
-     
 
     // #cnt3
     const $acdn = $('#cnt3 .accordion')
@@ -151,16 +175,17 @@ $(document).ready(function() {
     })
 
 
-    // #cnt4
-    $('.project2').hide();
- $('#cnt4 .next').click('on', function () {
-        $(this).parents('.project1').fadeOut().siblings('.project2').fadeIn();
-    });
 
-    $('#cnt4 .prev').click('on', function () {
-      $(this).parents('.project2').fadeOut().siblings('.project1').fadeIn();
-  });
-    // $('#cnt4 .prev').click('on', function () {
-    //     $(this).parents('.project2').css({visibility: 'hidden', overflow: 'hidden', maxHeight: 0}).prev().css({visibility: 'visible', maxHeight: 5000})
-    // });
+
+
+    // top 이동 버튼
+	$(".top").on("click", function () {
+		$("html, body").stop().animate({scrollTop: 0});
+		return false;
+	});
+
+
+
 });
+
+  
